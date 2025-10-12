@@ -1,20 +1,93 @@
-<h1 align="center">Hi 👋, I'm Lucas Andrade Zanetti</h1>
-<h3 align="center">Engineer. Developer. Learner.</h3>
+# Hello there 👋
 
-- 🔭 I’m currently working on **LabTech**
+![](https://github.com/halfrost/halfrost/blob/master/icons/header_1.png)
 
-- 🌱 I’m currently learning **Database and backend development**
 
-- 👯 I’m looking to collaborate on **Many other projects**
+<br>
+<br>
 
-- 📫 How to reach me **landradezanetti@gmail.com**
+* 🧐   Always interested in learning more about AI development, embedded system and fullstack. Recent focus on AI
+* 💼   Currently working on Labtech Ltda.
+* 🎓   Graduating on Software Engineering, in UnB - FCTE, Brazil.
+* 🌱   Currently learning MCP, C#, Database, Data Sctructure.
+* 📚   Reading 《Inteligência Artificial: uma abordagem moderna, 2021》《DOT NET Engenharia Reversa e o Software Seguro》.
+<br>
 
-<h3 align="left">Connect with me:</h3>
+#### 📫 Como me encontrar:
+
+<a href="https://linkedin.com/in/lucas-andrade-zanetti" target="_blank"><img src="https://img.icons8.com/color/48/000000/linkedin.png" width="4.5%"/></a> &nbsp; 
+<a href="https://instagram.com/zanetti_lucaz" target="_blank"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png" width="4.5%"/></a> &nbsp; 
+<a href="mailto:landradezanetti@gmail.com"><img src="https://img.icons8.com/fluent/48/000000/gmail.png" width="4.5%"/></a>
+<br>
+<br>
+
+#### 👨🏻‍💻 Linguagens e Ferramentas
+
 <p align="left">
-<a href="https://linkedin.com/in/lucas andrade zanetti" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="lucas andrade zanetti" height="30" width="40" /></a>
-<a href="https://instagram.com/zanetti_lucaz" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="zanetti_lucaz" height="30" width="40" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Spring"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt=".NET"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black" alt="C"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=git&logoColor=white" alt="Git"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/MinIO-C72744?style=for-the-badge&logo=minio&logoColor=white" alt="MinIO"/></a>&nbsp;
 </p>
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://reactnative.dev/" target="_blank" rel="noreferrer"> <img src="https://reactnative.dev/img/header_logo.svg" alt="reactnative" width="40" height="40"/> </a> <a href="https://sass-lang.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/> </a> <a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> </a> </p>
+<br>
 
+<div align="center">
+  
+  [![Stats](https://github-readme-stats.vercel.app/api?username=Bappoz&show_icons=true&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
+  <br>
+  <br>
+  <br>
+  [![trophy](https://github-profile-trophy.vercel.app/?username=Bappoz&theme=juicyfresh&no-frame=true&row=1&&margin-w=20&no-bg=true)](https://github.com/ryo-ma/github-profile-trophy)
+
+</div>
+
+<br>
+<br>
+
+  ##### I am currently aiming to reach ELO 1200 blitz on chess.com ⚡. Here is an ascii tracker of my 100 previous chess.com Rapid games.
+
+  ```
+  # ♟︎ Chess.com Ratings Chart in Rapid #
+  
+  Blitz Rating
+ 1135.00  ┤                                                                                               ╭╮
+ 1192.75  ┤                                                                                         ╭─────╯│ 
+ 1068.50  ┤                                                                                        ╭╯      ╰╮
+ 1035.25  ┤                                                                                     ╭╮╭╯        ╰
+ 1012.00  ┤                                                                                  ╭╮╭╯╰╯
+ 1003.75  ┤                          ╭╮                                                     ╭╯╰╯
+  997.50  ┤                         ╭╯╰╮╭╮                                      ╭╮╭╮      ╭─╯
+  985.25  ┤                     ╭╮╭─╯  ╰╯╰╮      ╭╮                         ╭╮╭─╯╰╯╰╮╭─╮ ╭╯
+  976.00  ┤                   ╭─╯╰╯       ╰╮   ╭─╯╰╮            ╭──╮╭─╮    ╭╯╰╯     ╰╯ ╰─╯
+  958.75  ┤                  ╭╯            ╰─╮╭╯   ╰─╮       ╭──╯  ╰╯ ╰─╮╭─╯
+  914.50  ┤                 ╭╯               ╰╯      ╰╮     ╭╯          ╰╯
+  898.25  ┤                ╭╯                         ╰╮   ╭╯
+  878.00  ┼────╮          ╭╯                           ╰─╮╭╯
+  844.75  ┤    ╰╮        ╭╯                              ╰╯
+  815.50  ┤     ╰╮  ╭────╯
+  795.25  ┤      ╰──╯
+  778.00  ┤
+
+Chart last updated - Sun Oct 12 14:05:47 EDT 2025  
+  ```
+  
