@@ -64,16 +64,18 @@
 <br>
 <br>
 
-  ##### I am currently aiming to reach ELO 1200 blitz on chess.com ⚡. Here is an ascii tracker of my 100 previous chess.com Rapid games.
+  ##### I am currently aiming to reach ELO 1500 blitz on chess.com ⚡. Here is an ascii tracker of my 100 previous chess.com Rapid games.
 
+  ##### I am currently in 1125 of rating in rapid
   ```
   # ♟︎ Chess.com Ratings Chart in Rapid #
   
   Blitz Rating
- 1135.00  ┤                                                                                               ╭╮
- 1192.75  ┤                                                                                         ╭─────╯│ 
- 1068.50  ┤                                                                                        ╭╯      ╰╮
- 1035.25  ┤                                                                                     ╭╮╭╯        ╰
+ 1125.00  ┤                                                                                                   ╭╯
+ 1110.00  ┤                                                                                               ╭╮  │
+ 1098.75  ┤                                                                                         ╭─────╯│ ╭╯
+ 1068.50  ┤                                                                                        ╭╯      ╰╮│
+ 1035.25  ┤                                                                                     ╭╮╭╯        ╰╯
  1012.00  ┤                                                                                  ╭╮╭╯╰╯
  1003.75  ┤                          ╭╮                                                     ╭╯╰╯
   997.50  ┤                         ╭╯╰╮╭╮                                      ╭╮╭╮      ╭─╯
