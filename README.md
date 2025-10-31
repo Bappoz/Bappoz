@@ -13,13 +13,6 @@
 * 📚   Reading 《Inteligência Artificial: uma abordagem moderna, 2021》《DOT NET Engenharia Reversa e o Software Seguro》.
 <br>
 
-#### 📫 Como me encontrar:
-
-<a href="https://linkedin.com/in/lucas-andrade-zanetti" target="_blank"><img src="https://img.icons8.com/color/48/000000/linkedin.png" width="4.5%"/></a> &nbsp; 
-<a href="https://instagram.com/zanetti_lucaz" target="_blank"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png" width="4.5%"/></a> &nbsp; 
-<a href="mailto:landradezanetti@gmail.com"><img src="https://img.icons8.com/fluent/48/000000/gmail.png" width="4.5%"/></a>
-<br>
-<br>
 
 #### 👨🏻‍💻 Linguagens e Ferramentas
 
