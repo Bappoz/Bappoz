@@ -49,14 +49,9 @@
 <div align="center">
   
   [![Stats](https://github-readme-stats.vercel.app/api?username=Bappoz&show_icons=true&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
-  <br>
-  <br>
-  <br>
-  [![trophy](https://github-profile-trophy.vercel.app/?username=Bappoz&theme=juicyfresh&no-frame=true&row=1&&margin-w=20&no-bg=true)](https://github.com/ryo-ma/github-profile-trophy)
 
 </div>
 
-<br>
 <br>
 
   ##### I am currently aiming to reach ELO 1500 blitz on chess.com ⚡. Here is an ascii tracker of my 100 previous chess.com Rapid games.
