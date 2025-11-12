@@ -40,6 +40,8 @@
   <a href="#"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>&nbsp;
   <a href="#"><img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash"/></a>&nbsp;
   <a href="#"><img src="https://img.shields.io/badge/MinIO-C72744?style=for-the-badge&logo=minio&logoColor=white" alt="MinIO"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/Batch_Script-000000?style=for-the-badge&logo=windows-terminal&logoColor=white" alt="Batch Script"/></a>&nbsp;
+  <a href="#"><img src="https://img.shields.io/badge/Lean-0F4C81?style=for-the-badge&logo=lean&logoColor=white" alt="Lean (Mathematical Proof Language)"/></a>&nbsp;
 </p>
 
 <br>
