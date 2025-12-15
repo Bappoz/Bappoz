@@ -1,4 +1,12 @@
-# Hello there 👋
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=FFFFFF&center=true&vCenter=true&width=590&lines=$+hello+world;$+welcome+to+my+github" />
+
+</div>
+
+
+
+<br>
 
 ![](https://github.com/halfrost/halfrost/blob/master/icons/header_1.png)
 
@@ -48,32 +56,23 @@
 
 <br>
 
-  ##### I am currently aiming to reach ELO 1500 blitz on chess.com ⚡. Here is an ascii tracker of my 100 previous chess.com Rapid games.
+<div align="center">
+I am currently in 1500 of rating in rapid
+</div>
 
-  ##### I am currently in 1125 of rating in rapid
-  ```
-  # ♟︎ Chess.com Ratings Chart in Rapid #
-  
-  Blitz Rating
- 1125.00  ┤                                                                                                   ╭╯
- 1110.00  ┤                                                                                               ╭╮  │
- 1098.75  ┤                                                                                         ╭─────╯│ ╭╯
- 1068.50  ┤                                                                                        ╭╯      ╰╮│
- 1035.25  ┤                                                                                     ╭╮╭╯        ╰╯
- 1012.00  ┤                                                                                  ╭╮╭╯╰╯
- 1003.75  ┤                          ╭╮                                                     ╭╯╰╯
- 997.50   ┤                         ╭╯╰╮╭╮                                      ╭╮╭╮      ╭─╯
- 985.25   ┤                     ╭╮╭─╯  ╰╯╰╮      ╭╮                         ╭╮╭─╯╰╯╰╮╭─╮ ╭╯
- 976.00   ┤                   ╭─╯╰╯       ╰╮   ╭─╯╰╮            ╭──╮╭─╮    ╭╯╰╯     ╰╯ ╰─╯
- 958.75   ┤                  ╭╯            ╰─╮╭╯   ╰─╮       ╭──╯  ╰╯ ╰─╮╭─╯
- 914.50   ┤                 ╭╯               ╰╯      ╰╮     ╭╯          ╰╯
- 898.25   ┤                ╭╯                         ╰╮   ╭╯
- 878.00   ┼────╮          ╭╯                           ╰─╮╭╯
- 844.75   ┤    ╰╮        ╭╯                              ╰╯
- 815.50   ┤     ╰╮  ╭────╯
- 795.25   ┤      ╰──╯
- 778.00   ┤
+<br>
 
-Chart last updated - Sun Oct 12 14:05:47 EDT 2025  
-  ```
+<div align="center">
+  <img
+    src="https://raw.githubusercontent.com/Bappoz/chess_readme_status/main/assets/chess-stats-rapid.svg" alt="Rapid"
+    width="45%"
+  />
+  <img
+    src="https://raw.githubusercontent.com/Bappoz/chess_readme_status/main/assets/chess-stats-blitz-neon.svg" alt="Blitz"
+    width="45%"
+  />
+</div>
+
+
+
   
