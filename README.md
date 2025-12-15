@@ -57,7 +57,7 @@
 <br>
 
 <div align="center">
-I am currently in 1500 of rating in rapid
+I am currently trying to achieve 1500 rating in rapid and 850 in blitz
 </div>
 
 <br>
