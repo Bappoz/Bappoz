@@ -15,10 +15,10 @@
 <br>
 
 * 🧐   Always interested in learning more about AI development, embedded system and fullstack. Recent focus on AI
-* 💼   Currently working on Labtech Ltda.
+* 💼   Currently developing my company Geckonomy. Sometime soon there will be updates
 * 🎓   Graduating on Software Engineering, in UnB - FCTE, Brazil.
-* 🌱   Currently learning MCP, C#, Database, Data Sctructure.
-* 📚   Reading 《Inteligência Artificial: uma abordagem moderna, 2021》《DOT NET Engenharia Reversa e o Software Seguro》.
+* 🌱   Currently learning MCP and RAG, Rust, Data Analysis in Python, Game Developing.
+* 📚   Reading 《The Rust Programming Language, 2018》.
 <br>
 
 
