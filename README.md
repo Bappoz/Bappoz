@@ -1,3 +1,5 @@
+<br>
+<br>
 <div align="center">
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=FFFFFF&center=true&vCenter=true&width=590&lines=$+hello+world;$+welcome+to+my+github" />
@@ -6,10 +8,8 @@
 
 
 
-<br>
 
 
-<br>
 
 <br>
 <br>
