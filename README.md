@@ -77,5 +77,11 @@ I am currently trying to achieve 1500 rating in rapid and 850 in blitz
 </div>
 
 
+<br>
+<br>
+<br>
+<div align="center">
+Vibe coding is obsolete, real ones aura code.
+</div
 
   
