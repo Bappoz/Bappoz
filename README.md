@@ -72,7 +72,7 @@ I am currently trying to achieve 1500 rating in rapid and 850 in blitz
     width="45%"
   />
   <img
-    src="https://raw.githubusercontent.com/Bappoz/chess_readme_status/main/assets/chess-stats-blitz-neon.svg" alt="Blitz"
+    src="https://raw.githubusercontent.com/Bappoz/chess_readme_status/main/assets/chess-stats-blitz.svg" alt="Blitz"
     width="45%"
   />
 </div>
