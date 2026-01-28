@@ -61,7 +61,7 @@
 <br>
 
 <div align="center">
-I am currently trying to achieve 1500 rating in rapid and 850 in blitz
+> _I am currently trying to achieve 1500 rating in rapid and 850 in blitz_
 </div>
 
 <br>
@@ -82,7 +82,9 @@ I am currently trying to achieve 1500 rating in rapid and 850 in blitz
 <br>
 <br>
 <div align="center">
-Vibe coding is obsolete, real ones aura code.
+𝐕𝐢𝐛𝐞 𝐜𝐨𝐝𝐢𝐧𝐠 𝐢𝐬 𝐨𝐛𝐬𝐨𝐥𝐞𝐭𝐞, 𝐫𝐞𝐚𝐥 𝐨𝐧𝐞𝐬 𝐚𝐮𝐫𝐚 𝐜𝐨𝐝𝐞.
+
+
 </div
 
   
