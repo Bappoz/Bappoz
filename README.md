@@ -5,12 +5,6 @@
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=FFFFFF&center=true&vCenter=true&width=590&lines=$+hello+world;$+welcome+to+my+github" />
 
 </div>
-
-
-
-
-
-
 <br>
 <br>
 <br>
@@ -18,7 +12,7 @@
 * 🧐   Always interested in learning more about AI development, embedded system and fullstack. Recent focus on AI
 * 💼   Currently developing my company Geckonomy. Sometime soon there will be updates
 * 🎓   Graduating on Software Engineering, in UnB - FCTE, Brazil.
-* 🌱   Currently learning MCP and RAG, Rust, Data Analysis in Python, Game Developing.
+* 🌱   Currently learning MCP and RAG, Rust, Data Analysis in Python, Game Development.
 * 📚   Reading 《The Rust Programming Language, 2018》.
 <br>
 
