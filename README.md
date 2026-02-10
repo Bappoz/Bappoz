@@ -9,17 +9,18 @@
 <br>
 <br>
 
-* 🧐   Always interested in learning more about AI development, embedded system and fullstack. Recent focus on AI
-* 💼   Currently developing my company Geckonomy. Sometime soon there will be updates
-* 🎓   Graduating on Software Engineering, in UnB - FCTE, Brazil.
-* 🌱   Currently learning MCP and RAG, Rust, Data Analysis in Python, Game Development.
-* 📚   Reading 《The Rust Programming Language, 2018》.
+<p align="center">
+<strong>Software Engineering student at UnB (FCTE)</strong> with a technical focus on AI systems, embedded software, and fullstack development. Currently building <strong>Geckonomy</strong>, working with MCP and RAG architectures, Rust-based systems, Python data analysis. Strong interest in performant, scalable systems and low-level engineering.
+</p>
+
 <br>
 
+<h2 align="center">
+ <strong>Linguagens e Ferramentas </strong>
+  
+</h2>
 
-#### 👨🏻‍💻 Linguagens e Ferramentas
-
-<p align="left">
+<p align="center">
   <a href="#"><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/></a>&nbsp;
   <a href="#"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/></a>&nbsp;
   <a href="#"><img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" alt="Rust"/></a>&nbsp;
@@ -54,9 +55,9 @@
 
 <br>
 
-<div align="center">
-> _I am currently trying to achieve 1500 rating in rapid and 850 in blitz_
-</div>
+<h3 align="center">
+☛ <u>I am currently trying to achieve 1500 rating in rapid and 850 in blitz</u>
+</h3>
 
 <br>
 
