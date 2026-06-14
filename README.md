@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2500&pause=800&color=8C8C8C&center=true&vCenter=true&width=500&lines=bappoz;software+engineer+%40+UnB+(FCTE);building+Geckonomy;Rust+%7C+Python+%7C+TypeScript" alt="" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=2500&pause=800&color=FF8C00&center=true&vCenter=true&width=1000&lines=bappoz;software+engineer+%40+UnB+(FCTE);Rust+%7C+Python+%7C+TypeScript" alt="" />
 </div>
 
 <p align="center">
@@ -47,3 +47,10 @@
 </div>
 
 <br>
+
+<p align="center">
+  <img 
+    src="https://capsule-render.vercel.app/api?type=waving&color=0:8B5E3C,50:C97A2B,100:FFB347&height=100&section=footer&animation=fadeIn"
+    width="100%"
+  />
+</p>
