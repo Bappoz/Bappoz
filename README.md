@@ -51,9 +51,9 @@
 <div align="center">
 ♟ &nbsp; targeting <strong>1500 rapid</strong> · <strong>850 blitz</strong> &nbsp; ♟
 <br><br>
-<img src="https://raw.githubusercontent.com/Bappoz/chess_readme_status/main/assets/chess-stats-rapid.svg" alt="Rapid" width="45%" />
+<img src="https://raw.githubusercontent.com/Bappoz/chess_readme_status/main/assets/chess-stats-rapid-midnight.svg" alt="Rapid" width="45%" />
 &nbsp;&nbsp;
-<img src="https://raw.githubusercontent.com/Bappoz/chess_readme_status/main/assets/chess-stats-blitz.svg" alt="Blitz" width="45%" />
+<img src="https://raw.githubusercontent.com/Bappoz/chess_readme_status/main/assets/chess-stats-blitz-midnight.svg" alt="Blitz" width="45%" />
 </div>
 <br>
 <p align="center">
