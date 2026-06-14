@@ -78,6 +78,8 @@
 <br>
 <div align="center">
 
-</div
+[![Spotify](https://spotify-now-playing-m4yj.onrender.com/api/orchestrator)](https://open.spotify.com/user/bappoz)
+
+</div>
 
   
