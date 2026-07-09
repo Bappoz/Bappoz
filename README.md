@@ -24,12 +24,12 @@
 <br>
 <a href="https://github.com/Bappoz">
 <img src="https://img.shields.io/badge/GITHUB-4A0E0E?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
+</a> 
 <a href="https://linkedin.com/in/lucas-andrade-zanetti">
 <img src="https://img.shields.io/badge/LINKEDIN-6B1A1A?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
-<a href="mailto:landradezanetti@email.com">
-<img src="https://img.shields.io/badge/EMAIL-8B0000?style=for-the-badge&logo=gmail&logoColor=white"/>
+<a href="https://www.youtube.com/@bappoz">
+<img src="https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white"/>
 </a>
 </div>
 <br>
