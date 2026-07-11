@@ -8,7 +8,7 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=3000&pause=800&color=8B0000&center=true&vCenter=true&width=1200&lines=Hi,+I'am+Lucas+Zanetti;Software+engineer+%40+UnB+(FCTE)" alt="" />
 </div>
 <p align="center">
-  AI systems &nbsp;·&nbsp; embedded &nbsp;·&nbsp; fullstack &nbsp;·&nbsp; low-level engineering
+  𝙰𝙸 𝚜𝚢𝚜𝚝𝚎𝚖𝚜 &nbsp;·&nbsp; 𝚎𝚖𝚋𝚎𝚍𝚍𝚎𝚍 &nbsp;·&nbsp; 𝚏𝚞𝚕𝚕𝚜𝚝𝚊𝚌𝚔 &nbsp;·&nbsp; 𝚕𝚘𝚠-𝚕𝚎𝚟𝚎𝚕 𝚎𝚗𝚐𝚒𝚗𝚎𝚎𝚛𝚒𝚗𝚐
 </p>
 <p align="center">
   <img src="./image.png" width="60" style="border-radius:50%"/>
@@ -49,7 +49,7 @@
 </p>
 <br>
 <div align="center">
-♟ &nbsp; targeting <strong>1500 rapid</strong> · <strong>850 blitz</strong> &nbsp; ♟
+♟ &nbsp; 𝚝𝚊𝚛𝚐𝚎𝚝𝚒𝚗𝚐 <strong>𝟷𝟻𝟶𝟶 𝚛𝚊𝚙𝚒𝚍</strong> · <strong>𝟾𝟻𝟶 𝚋𝚕𝚒𝚝𝚣</strong> &nbsp; ♟
 <br><br>
 <img src="https://raw.githubusercontent.com/Bappoz/chess_readme_status/main/assets/chess-stats-rapid-midnight.svg" alt="Rapid" width="45%" />
 &nbsp;&nbsp;
