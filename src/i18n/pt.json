@@ -11,10 +11,10 @@
   "hero": {
     "role": "Engenheiro de Software & Dados",
     "location": "Brasília, Brasil",
-    "headline_1": "Construo sistemas",
-    "headline_accent": "de baixo nível",
-    "headline_2": "e produtos que resolvem",
-    "tagline": "Rust, C, C++ para o que precisa de precisão. Python para dados. Fullstack para entregar. Da engenharia de baixo nível a sistemas de IA.",
+    "headline_1": "Construo produtos",
+    "headline_accent": "de ponta a ponta",
+    "headline_2": "do front ao baixo nível",
+    "tagline": "Do front ao back — sites fullstack, APIs e sistemas — com o mesmo rigor em engenharia de baixo nível (Rust, C, C++), dados e IA.",
     "cta_projects": "Ver projetos",
     "cta_contact": "Entrar em contato",
     "scroll": "role para explorar",
@@ -88,9 +88,13 @@
       {
         "role": "Nexo — Hackathon Internacional da MLH",
         "period": "Jan 2026",
-        "text": "Projeto premiado entre 117 projetos e 356 participantes. Solução de onboarding e compreensão de grandes repositórios de código, com análise automatizada e explicações contextuais."
+        "text": "Projeto premiado entre 117 projetos e 356 participantes. Solução de onboarding e compreensão de grandes repositórios de código, com análise automatizada e explicações contextuais.",
+        "link": "https://www.youtube.com/watch?v=WJ31fUvhq2c",
+        "linkLabel": "Assistir apresentação"
       }
-    ]
+    ],
+    "gallery_title": "Galeria de eventos",
+    "gallery_hint": "Adicione fotos em public/gallery/ e liste em src/data/gallery.ts"
   },
   "projects": {
     "label": "Projetos selecionados",

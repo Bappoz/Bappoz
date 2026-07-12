@@ -90,16 +90,6 @@ export default function Hero({ ready }: { ready: boolean }) {
             ))}
           </motion.div>
 
-          <motion.div className="hero__cards" {...fade(1.05)}>
-            <a href="#stack" className="accent-card accent-card--orange" data-cursor>
-              <span className="accent-card__label">{t("hero.card_systems")}</span>
-              <ArrowIcon size={18} />
-            </a>
-            <a href="#projects" className="accent-card accent-card--lime" data-cursor>
-              <span className="accent-card__label">{t("hero.card_ai")}</span>
-              <ArrowIcon size={18} />
-            </a>
-          </motion.div>
         </div>
 
         <motion.aside

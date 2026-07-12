@@ -2,9 +2,9 @@ import { useTranslation } from "react-i18next";
 import { Reveal, SectionLabel } from "./Reveal";
 
 const RAPID =
-  "https://raw.githubusercontent.com/Bappoz/chess_readme_status/main/assets/chess-stats-rapid-tech.svg";
-const BLITZ =
-  "https://raw.githubusercontent.com/Bappoz/chess_readme_status/main/assets/chess-stats-blitz-tech.svg";
+  "https://raw.githubusercontent.com/Bappoz/chess_readme_status/main/assets/chess-stats-rapid-hero-wood.svg";
+const BULLET =
+  "https://raw.githubusercontent.com/Bappoz/chess_readme_status/main/assets/chess-stats-bullet-hero-wood.svg";
 
 export default function Chess() {
   const { t } = useTranslation();
@@ -25,7 +25,7 @@ export default function Chess() {
           <img src={RAPID + bust} alt="Chess.com rapid stats" loading="lazy" />
         </Reveal>
         <Reveal className="chess__card" delay={0.16}>
-          <img src={BLITZ + bust} alt="Chess.com blitz stats" loading="lazy" />
+          <img src={BULLET + bust} alt="Chess.com bullet stats" loading="lazy" />
         </Reveal>
       </div>
     </section>

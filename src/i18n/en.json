@@ -11,10 +11,10 @@
   "hero": {
     "role": "Software & Data Engineer",
     "location": "Brasília, Brazil",
-    "headline_1": "I build",
-    "headline_accent": "low-level systems",
-    "headline_2": "and products that solve",
-    "tagline": "Rust, C, C++ for the things that need precision. Python for data. Fullstack to ship. From low-level engineering to AI systems.",
+    "headline_1": "I build products",
+    "headline_accent": "end to end",
+    "headline_2": "from front to the metal",
+    "tagline": "From front-end to back-end — fullstack websites, APIs and systems — with the same rigor in low-level engineering (Rust, C, C++), data and AI.",
     "cta_projects": "View projects",
     "cta_contact": "Get in touch",
     "scroll": "scroll to explore",
@@ -88,9 +88,13 @@
       {
         "role": "Nexo — MLH International Hackathon",
         "period": "Jan 2026",
-        "text": "Award-winning project among 117 projects and 356 participants. A solution for onboarding and understanding large code repositories, with automated analysis and contextual explanations."
+        "text": "Award-winning project among 117 projects and 356 participants. A solution for onboarding and understanding large code repositories, with automated analysis and contextual explanations.",
+        "link": "https://www.youtube.com/watch?v=WJ31fUvhq2c",
+        "linkLabel": "Watch the presentation"
       }
-    ]
+    ],
+    "gallery_title": "Event gallery",
+    "gallery_hint": "Add photos to public/gallery/ and list them in src/data/gallery.ts"
   },
   "projects": {
     "label": "Selected work",

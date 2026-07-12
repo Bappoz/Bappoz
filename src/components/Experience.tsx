@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Reveal, SectionLabel } from "./Reveal";
+import GalleryCarousel from "./GalleryCarousel";
+import { BrandIcon, ArrowIcon } from "./icons/Icons";
 
 interface Job {
   role: string;
@@ -11,6 +13,8 @@ interface Event {
   role: string;
   period: string;
   text: string;
+  link?: string;
+  linkLabel?: string;
 }
 
 export default function Experience() {
@@ -55,9 +59,28 @@ export default function Experience() {
             <span className="event-card__period mono">{ev.period}</span>
             <h4 className="event-card__role">{ev.role}</h4>
             <p className="event-card__text">{ev.text}</p>
+            {ev.link && (
+              <a
+                href={ev.link}
+                target="_blank"
+                rel="noreferrer"
+                className="event-card__link"
+                data-cursor
+              >
+                <BrandIcon name="youtube" size={17} />
+                {ev.linkLabel ?? "YouTube"}
+                <ArrowIcon size={14} />
+              </a>
+            )}
           </Reveal>
         ))}
       </div>
+
+      <Reveal className="work__events-title mono">{t("work.gallery_title")}</Reveal>
+      <GalleryCarousel />
+      <Reveal className="gallery__hint mono" delay={0.1}>
+        {t("work.gallery_hint")}
+      </Reveal>
     </section>
   );
 }

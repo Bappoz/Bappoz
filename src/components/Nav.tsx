@@ -34,8 +34,7 @@ export default function Nav() {
   return (
     <header className="nav">
       <a href="#top" className="nav__logo" data-magnetic aria-label="Home">
-        <span className="nav__logo-mark">LZ</span>
-        <span className="nav__logo-dot" />
+        <img src="/logo-mark.png" alt="Lucas Zanetti" />
       </a>
 
       <nav className={`nav__pill ${open ? "nav__pill--open" : ""}`}>
