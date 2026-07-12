@@ -56,7 +56,6 @@ export default function App() {
         {intro && <Preloader key="preloader" onDone={finishIntro} />}
       </AnimatePresence>
       <Cursor />
-      <div className="grain" aria-hidden="true" />
       <Nav />
       <main>
         <Hero ready={!intro} />

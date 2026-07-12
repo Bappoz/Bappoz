@@ -18,12 +18,19 @@
     "cta_projects": "View projects",
     "cta_contact": "Get in touch",
     "scroll": "scroll to explore",
-    "available": "Available for new projects"
+    "available": "Available for new projects",
+    "stats": [
+      { "v": "+40", "l": "Public repositories" },
+      { "v": "08", "l": "Languages" },
+      { "v": "6th", "l": "Semester · Software Eng. UnB" }
+    ],
+    "card_systems": "Low-level systems · Rust",
+    "card_ai": "AI · Fullstack · Data"
   },
   "about": {
     "label": "About",
     "title": "An engineer focused on correctness, performance and systems that matter.",
-    "p1": "I'm a Software Engineering student at the University of Brasília (FCTE), currently in my 5th semester. I work across web development, software in high- and low-level languages, ETL and web scraping, plus data standardization to support decision-making.",
+    "p1": "I'm a Software Engineering student at the University of Brasília (FCTE), currently in my 6th semester. I work across web development, software in high- and low-level languages, ETL and web scraping, plus data standardization to support decision-making.",
     "p2": "I have hands-on experience with Docker, AWS and Git, work in agile teams and was awarded at an MLH international hackathon. I like going deep: compilers, graphics engines, blockchain and computer vision in Rust.",
     "fact_focus": "Focus",
     "fact_focus_v": "Low-level systems, AI & Fullstack",

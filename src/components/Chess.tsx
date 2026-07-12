@@ -2,9 +2,9 @@ import { useTranslation } from "react-i18next";
 import { Reveal, SectionLabel } from "./Reveal";
 
 const RAPID =
-  "https://raw.githubusercontent.com/Bappoz/chess_readme_status/main/assets/chess-stats-rapid-midnight.svg";
+  "https://raw.githubusercontent.com/Bappoz/chess_readme_status/main/assets/chess-stats-rapid-tech.svg";
 const BLITZ =
-  "https://raw.githubusercontent.com/Bappoz/chess_readme_status/main/assets/chess-stats-blitz-midnight.svg";
+  "https://raw.githubusercontent.com/Bappoz/chess_readme_status/main/assets/chess-stats-blitz-tech.svg";
 
 export default function Chess() {
   const { t } = useTranslation();

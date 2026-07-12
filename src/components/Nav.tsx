@@ -5,14 +5,23 @@ const sections = ["about", "stack", "work", "projects", "activity", "contact"] a
 
 export default function Nav() {
   const { t, i18n } = useTranslation();
-  const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState<string>("");
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) setActive(e.target.id);
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px" }
+    );
+    sections.forEach((s) => {
+      const el = document.getElementById(s);
+      if (el) obs.observe(el);
+    });
+    return () => obs.disconnect();
   }, []);
 
   const toggleLang = () => {
@@ -20,20 +29,23 @@ export default function Nav() {
     i18n.changeLanguage(next);
     document.documentElement.lang = next === "pt" ? "pt-BR" : "en";
   };
-
   const lang = i18n.language.startsWith("pt") ? "PT" : "EN";
 
   return (
-    <header className={`nav ${scrolled ? "nav--scrolled" : ""}`}>
-      <a href="#top" className="nav__logo" data-magnetic>
+    <header className="nav">
+      <a href="#top" className="nav__logo" data-magnetic aria-label="Home">
         <span className="nav__logo-mark">LZ</span>
         <span className="nav__logo-dot" />
       </a>
 
-      <nav className={`nav__links ${open ? "nav__links--open" : ""}`}>
+      <nav className={`nav__pill ${open ? "nav__pill--open" : ""}`}>
         {sections.map((s) => (
-          <a key={s} href={`#${s}`} onClick={() => setOpen(false)}>
-            <span className="nav__idx">{String(sections.indexOf(s) + 1).padStart(2, "0")}</span>
+          <a
+            key={s}
+            href={`#${s}`}
+            className={active === s ? "is-active" : ""}
+            onClick={() => setOpen(false)}
+          >
             {t(`nav.${s}`)}
           </a>
         ))}

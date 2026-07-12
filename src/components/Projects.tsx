@@ -65,7 +65,7 @@ export default function Projects() {
                   </span>
                 </div>
 
-                <h3 className="project-card__name">{p.name}</h3>
+                <h3 className="project-card__name">{p.name.replace(/[-_]/g, " ")}</h3>
                 <p className="project-card__desc">{isPt ? p.descPt : p.descEn}</p>
 
                 <div className="project-card__foot">

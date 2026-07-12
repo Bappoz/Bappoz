@@ -66,17 +66,6 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    name: "perceptor",
-    descPt:
-      "Modelo ECS baseado na bevy-engine para visão computacional, explorando arquitetura de dados orientada a entidades em Rust.",
-    descEn:
-      "An ECS model based on the bevy-engine for computer vision, exploring entity-oriented data architecture in Rust.",
-    tags: ["Rust", "ECS", "Computer Vision"],
-    category: "systems",
-    language: "Rust",
-    href: "https://github.com/Bappoz/perceptor",
-  },
-  {
     name: "Rustic3dGameEngine",
     descPt:
       "Engine de jogo 3D em Rust, refatoração e evolução de um projeto anterior em C++.",
@@ -109,17 +98,6 @@ export const projects: Project[] = [
     category: "ai",
     language: "TypeScript",
     href: "https://github.com/Bappoz/voxForge-3d-assistant",
-  },
-  {
-    name: "smart-shopper-mcp-server",
-    descPt:
-      "Agente de IA assistente de compras em Python + Model Context Protocol (MCP) para gestão inteligente de wishlist e orçamento.",
-    descEn:
-      "A shopping-assistant AI agent in Python + Model Context Protocol (MCP) for smart wishlist and budget management.",
-    tags: ["Python", "MCP", "AI Agent"],
-    category: "ai",
-    language: "Python",
-    href: "https://github.com/Bappoz/smart-shopper-mcp-server",
   },
   {
     name: "chess_readme_status",

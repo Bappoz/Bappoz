@@ -1,4 +1,4 @@
-import { useRef, type CSSProperties } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import FerrisCrab from "./FerrisCrab";
@@ -26,14 +26,18 @@ function Words({ text, delay = 0, ready }: { text: string; delay?: number; ready
   );
 }
 
-const orbitChips = ["Rust", "C++", "WASM", "Python", "TS"];
+interface Stat {
+  v: string;
+  l: string;
+}
 
 export default function Hero({ ready }: { ready: boolean }) {
   const { t } = useTranslation();
-  const visualRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
+  const stats = t("hero.stats", { returnObjects: true }) as Stat[];
 
   const onMove = (e: React.MouseEvent) => {
-    const el = visualRef.current;
+    const el = cardRef.current;
     if (!el || window.matchMedia("(hover: none)").matches) return;
     const r = el.getBoundingClientRect();
     const px = (e.clientX - r.left - r.width / 2) / r.width;
@@ -42,46 +46,101 @@ export default function Hero({ ready }: { ready: boolean }) {
     el.style.setProperty("--py", py.toFixed(3));
   };
   const onLeave = () => {
-    const el = visualRef.current;
-    if (!el) return;
-    el.style.setProperty("--px", "0");
-    el.style.setProperty("--py", "0");
+    cardRef.current?.style.setProperty("--px", "0");
+    cardRef.current?.style.setProperty("--py", "0");
   };
 
   const fade = (delay: number) => ({
-    initial: { opacity: 0, y: 16 },
-    animate: ready ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 },
+    initial: { opacity: 0, y: 18 },
+    animate: ready ? { opacity: 1, y: 0 } : { opacity: 0, y: 18 },
     transition: { duration: 0.7, ease, delay },
   });
 
   return (
     <section className="hero" id="top" onMouseMove={onMove} onMouseLeave={onLeave}>
-      <div className="hero__grid" aria-hidden="true" />
-      <div className="hero__glow" aria-hidden="true" />
-
       <div className="hero__layout">
-        <div className="hero__inner">
-          <motion.p className="hero__role" {...fade(0.15)}>
-            Lucas Andrade Zanetti · {t("hero.role")}
+        <div className="hero__main">
+          <motion.p className="hero__eyebrow" {...fade(0.1)}>
+            <span className="hero__eyebrow-dot" />
+            {t("hero.role")}
           </motion.p>
 
           <h1 className="hero__title">
             <span className="hero__line">
-              <Words text={t("hero.headline_1")} delay={0.2} ready={ready} />
+              <Words text={t("hero.headline_1")} delay={0.15} ready={ready} />
             </span>
-            <span className="hero__line hero__line--accent">
-              <Words text={t("hero.headline_accent")} delay={0.35} ready={ready} />
+            <span className="hero__line hero__line--ghost">
+              <Words text={t("hero.headline_accent")} delay={0.3} ready={ready} />
             </span>
             <span className="hero__line">
-              <Words text={t("hero.headline_2")} delay={0.55} ready={ready} />
+              <Words text={t("hero.headline_2")} delay={0.5} ready={ready} />
             </span>
           </h1>
 
-          <motion.p className="hero__tagline" {...fade(0.8)}>
+          <motion.p className="hero__tagline" {...fade(0.75)}>
             {t("hero.tagline")}
           </motion.p>
 
-          <motion.div className="hero__cta" {...fade(0.95)}>
+          <motion.div className="hero__stats" {...fade(0.9)}>
+            {stats.map((s, i) => (
+              <div className="hero__stat" key={i}>
+                <span className="hero__stat-v">{s.v}</span>
+                <span className="hero__stat-l">{s.l}</span>
+              </div>
+            ))}
+          </motion.div>
+
+          <motion.div className="hero__cards" {...fade(1.05)}>
+            <a href="#stack" className="accent-card accent-card--orange" data-cursor>
+              <span className="accent-card__label">{t("hero.card_systems")}</span>
+              <ArrowIcon size={18} />
+            </a>
+            <a href="#projects" className="accent-card accent-card--lime" data-cursor>
+              <span className="accent-card__label">{t("hero.card_ai")}</span>
+              <ArrowIcon size={18} />
+            </a>
+          </motion.div>
+        </div>
+
+        <motion.aside
+          className="hero__card"
+          ref={cardRef}
+          initial={{ opacity: 0, y: 24 }}
+          animate={ready ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
+          transition={{ duration: 0.9, ease, delay: 0.4 }}
+        >
+          <span className="hero__card-ring" aria-hidden="true" />
+          <div className="hero__photo">
+            <img
+              src="/lucas-cutout.png"
+              alt="Lucas Andrade Zanetti"
+              width={420}
+              height={420}
+            />
+          </div>
+
+          <h2 className="hero__name">Lucas Andrade Zanetti</h2>
+          <div className="hero__ferris-badge" title="Rust enthusiast">
+            <FerrisCrab size={78} />
+          </div>
+          <p className="hero__card-role">{t("hero.location")}</p>
+
+          <div className="hero__card-socials">
+            {socials.map((s) => (
+              <a
+                key={s.key}
+                href={s.href}
+                target={s.key === "email" ? undefined : "_blank"}
+                rel="noreferrer"
+                aria-label={s.label}
+                data-cursor
+              >
+                <BrandIcon name={s.key} size={18} />
+              </a>
+            ))}
+          </div>
+
+          <div className="hero__card-cta">
             <a href="#projects" className="btn btn--primary" data-magnetic>
               {t("hero.cta_projects")}
               <ArrowIcon />
@@ -89,57 +148,8 @@ export default function Hero({ ready }: { ready: boolean }) {
             <a href="#contact" className="btn btn--ghost" data-magnetic>
               {t("hero.cta_contact")}
             </a>
-          </motion.div>
-
-          <motion.div className="hero__socials" {...fade(1.1)}>
-            {socials.map((s) => (
-              <a
-                key={s.key}
-                href={s.href}
-                target={s.key === "email" ? undefined : "_blank"}
-                rel="noreferrer"
-                className="hero__social"
-                aria-label={s.label}
-                data-cursor
-              >
-                <BrandIcon name={s.key} size={19} />
-              </a>
-            ))}
-          </motion.div>
-        </div>
-
-        <motion.div
-          className="hero__visual"
-          ref={visualRef}
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={ready ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-          transition={{ duration: 0.9, ease, delay: 0.5 }}
-        >
-          <div className="hero__portrait-wrap">
-            <span className="hero__portrait-glow" aria-hidden="true" />
-            <div className="orbit" aria-hidden="true">
-              {orbitChips.map((c, i) => (
-                <span
-                  className="orbit__chip"
-                  key={c}
-                  style={{ "--a": `${(360 / orbitChips.length) * i}deg` } as CSSProperties}
-                >
-                  <span className="mono">{c}</span>
-                </span>
-              ))}
-            </div>
-            <img
-              className="hero__portrait"
-              src="/lucas-cutout.png"
-              alt="Lucas Andrade Zanetti"
-              width={420}
-              height={420}
-            />
-            <div className="hero__ferris">
-              <FerrisCrab size={128} />
-            </div>
           </div>
-        </motion.div>
+        </motion.aside>
       </div>
 
       <motion.div

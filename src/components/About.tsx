@@ -28,18 +28,8 @@ export default function About() {
 
         <div className="about__right">
           <Reveal className="about__portrait" delay={0.15}>
-            {/* Drop your pixel portrait at public/avatar.png — it takes over automatically.
-                Until then, the generated pixel placeholder (avatar.svg) is shown. */}
-            <img
-              src="/avatar.png"
-              alt="Lucas Andrade Zanetti"
-              width={220}
-              height={220}
-              onError={(e) => {
-                const img = e.currentTarget as HTMLImageElement;
-                if (!img.src.endsWith("avatar.svg")) img.src = "/avatar.svg";
-              }}
-            />
+            {/* Swap public/about.jpg for the selfie you attached if you prefer it. */}
+            <img src="/about.jpg" alt="Lucas Andrade Zanetti" width={300} height={300} />
             <span className="about__portrait-ring" aria-hidden="true" />
           </Reveal>
 

@@ -18,12 +18,19 @@
     "cta_projects": "Ver projetos",
     "cta_contact": "Entrar em contato",
     "scroll": "role para explorar",
-    "available": "Disponível para novos projetos"
+    "available": "Disponível para novos projetos",
+    "stats": [
+      { "v": "+40", "l": "Repositórios públicos" },
+      { "v": "08", "l": "Linguagens" },
+      { "v": "6º", "l": "Semestre · Eng. de Software UnB" }
+    ],
+    "card_systems": "Sistemas de baixo nível · Rust",
+    "card_ai": "IA · Fullstack · Dados"
   },
   "about": {
     "label": "Sobre",
     "title": "Engenheiro focado em corretude, performance e sistemas que importam.",
-    "p1": "Sou estudante de Engenharia de Software na Universidade de Brasília (FCTE), atualmente no 5º semestre. Trabalho com desenvolvimento web, softwares em linguagens de alto e baixo nível, ETL e web scraping, além de padronização de dados para suporte a decisões.",
+    "p1": "Sou estudante de Engenharia de Software na Universidade de Brasília (FCTE), atualmente no 6º semestre. Trabalho com desenvolvimento web, softwares em linguagens de alto e baixo nível, ETL e web scraping, além de padronização de dados para suporte a decisões.",
     "p2": "Tenho experiência com Docker, AWS e Git, trabalho em equipes ágeis e fui premiado em hackathon internacional da MLH. Gosto de ir fundo: compiladores, engines gráficas, blockchain e visão computacional em Rust.",
     "fact_focus": "Foco",
     "fact_focus_v": "Sistemas de baixo nível, IA & Fullstack",
