@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "about": "About",
+    "stack": "Stack",
+    "work": "Experience",
+    "projects": "Projects",
+    "activity": "Activity",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "hero": {
+    "role": "Software & Data Engineer",
+    "location": "Brasília, Brazil",
+    "headline_1": "I build",
+    "headline_accent": "low-level systems",
+    "headline_2": "and products that solve",
+    "tagline": "Rust, C, C++ for the things that need precision. Python for data. Fullstack to ship. From low-level engineering to AI systems.",
+    "cta_projects": "View projects",
+    "cta_contact": "Get in touch",
+    "scroll": "scroll to explore",
+    "available": "Available for new projects"
+  },
+  "about": {
+    "label": "About",
+    "title": "An engineer focused on correctness, performance and systems that matter.",
+    "p1": "I'm a Software Engineering student at the University of Brasília (FCTE), currently in my 5th semester. I work across web development, software in high- and low-level languages, ETL and web scraping, plus data standardization to support decision-making.",
+    "p2": "I have hands-on experience with Docker, AWS and Git, work in agile teams and was awarded at an MLH international hackathon. I like going deep: compilers, graphics engines, blockchain and computer vision in Rust.",
+    "fact_focus": "Focus",
+    "fact_focus_v": "Low-level systems, AI & Fullstack",
+    "fact_lang": "Languages",
+    "fact_lang_v": "Portuguese, English (Cambridge), Spanish",
+    "fact_edu": "Education",
+    "fact_edu_v": "Software Engineering — UnB (FCTE)",
+    "fact_loc": "Based in",
+    "fact_loc_v": "Brasília, Brazil"
+  },
+  "stack": {
+    "label": "Tech stack",
+    "title": "The tools I build with.",
+    "languages": "Languages",
+    "frameworks": "Frameworks & Libs",
+    "tools": "Tools & Infra",
+    "concepts": "Concepts"
+  },
+  "rust": {
+    "note": "Rust is my favorite language — Ferris hangs around here."
+  },
+  "work": {
+    "label": "Experience",
+    "title": "Where I put it all to work.",
+    "present": "Present",
+    "jobs": [
+      {
+        "role": "Software Engineer",
+        "company": "DW Corp",
+        "period": "Apr 2025 — Present",
+        "points": [
+          "Developed and deployed applications, ensuring high-quality code and functionality.",
+          "Collaborated with the team to design and implement innovative solutions using agile methodologies.",
+          "Continuous learning and improvement in software engineering principles."
+        ]
+      },
+      {
+        "role": "Data Engineer",
+        "company": "UniSer",
+        "period": "Jul 2025 — Dec 2025",
+        "points": [
+          "Web scraping and ETL to extract data from Google Scholar, applied to the University of Aging.",
+          "Automated collection and organization of academic information (papers, research and professional data).",
+          "Converted data into standardized Excel tables to support researcher recruitment."
+        ]
+      }
+    ],
+    "events_title": "Talks & Events",
+    "events": [
+      {
+        "role": "Speaker — Campus Party Brasília",
+        "period": "Jul 2025",
+        "text": "Representing DW Corp, I shared experiences and challenges from an advanced web project already in production, focused on practical learnings and professional growth."
+      },
+      {
+        "role": "Nexo — MLH International Hackathon",
+        "period": "Jan 2026",
+        "text": "Award-winning project among 117 projects and 356 participants. A solution for onboarding and understanding large code repositories, with automated analysis and contextual explanations."
+      }
+    ]
+  },
+  "projects": {
+    "label": "Selected work",
+    "title": "Things I've built.",
+    "subtitle": "A selection prioritizing technical depth. Each card leads to the code — or the live product.",
+    "all_filter": "All",
+    "filter_systems": "Systems / Rust",
+    "filter_ai": "AI / ML",
+    "filter_web": "Web / Tools",
+    "view_code": "View code",
+    "view_live": "View site",
+    "view_all": "See all repositories on GitHub",
+    "featured": "Featured"
+  },
+  "activity": {
+    "label": "GitHub activity",
+    "title": "Always building something.",
+    "subtitle": "Contributions from the last 12 months, updated in real time from the GitHub API.",
+    "contributions": "contributions in the last year",
+    "loading": "Loading activity...",
+    "error": "Couldn't load activity right now.",
+    "less": "less",
+    "more": "more",
+    "repos": "Public repositories",
+    "followers": "Followers",
+    "stars": "Primary language"
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Let's build something.",
+    "subtitle": "Open to opportunities, collaborations and good technical conversations.",
+    "email_cta": "Send email",
+    "connect": "Connect with me"
+  },
+  "footer": {
+    "built": "Built with React, Rust at heart and Ferris as mascot.",
+    "rights": "All rights reserved."
+  },
+  "chess": {
+    "label": "Off the code",
+    "title": "Chess, when the compiler rests.",
+    "targeting": "Targeting",
+    "rapid": "rapid",
+    "blitz": "blitz"
+  }
+}

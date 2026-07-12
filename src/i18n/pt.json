@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "stack": "Stack",
+    "work": "Experiência",
+    "projects": "Projetos",
+    "activity": "Atividade",
+    "contact": "Contato",
+    "resume": "Currículo"
+  },
+  "hero": {
+    "role": "Engenheiro de Software & Dados",
+    "location": "Brasília, Brasil",
+    "headline_1": "Construo sistemas",
+    "headline_accent": "de baixo nível",
+    "headline_2": "e produtos que resolvem",
+    "tagline": "Rust, C, C++ para o que precisa de precisão. Python para dados. Fullstack para entregar. Da engenharia de baixo nível a sistemas de IA.",
+    "cta_projects": "Ver projetos",
+    "cta_contact": "Entrar em contato",
+    "scroll": "role para explorar",
+    "available": "Disponível para novos projetos"
+  },
+  "about": {
+    "label": "Sobre",
+    "title": "Engenheiro focado em corretude, performance e sistemas que importam.",
+    "p1": "Sou estudante de Engenharia de Software na Universidade de Brasília (FCTE), atualmente no 5º semestre. Trabalho com desenvolvimento web, softwares em linguagens de alto e baixo nível, ETL e web scraping, além de padronização de dados para suporte a decisões.",
+    "p2": "Tenho experiência com Docker, AWS e Git, trabalho em equipes ágeis e fui premiado em hackathon internacional da MLH. Gosto de ir fundo: compiladores, engines gráficas, blockchain e visão computacional em Rust.",
+    "fact_focus": "Foco",
+    "fact_focus_v": "Sistemas de baixo nível, IA & Fullstack",
+    "fact_lang": "Idiomas",
+    "fact_lang_v": "Português, Inglês (Cambridge), Espanhol",
+    "fact_edu": "Formação",
+    "fact_edu_v": "Eng. de Software — UnB (FCTE)",
+    "fact_loc": "Base",
+    "fact_loc_v": "Brasília, Brasil"
+  },
+  "stack": {
+    "label": "Stack técnica",
+    "title": "Ferramentas que uso para construir.",
+    "languages": "Linguagens",
+    "frameworks": "Frameworks & Libs",
+    "tools": "Ferramentas & Infra",
+    "concepts": "Conceitos"
+  },
+  "rust": {
+    "note": "Rust é minha linguagem favorita — Ferris está por aqui."
+  },
+  "work": {
+    "label": "Experiência",
+    "title": "Onde apliquei tudo isso.",
+    "present": "Presente",
+    "jobs": [
+      {
+        "role": "Engenheiro de Software",
+        "company": "DW Corp",
+        "period": "Abr 2025 — Presente",
+        "points": [
+          "Desenvolvimento e implantação de aplicativos, garantindo código e funcionalidade de alta qualidade.",
+          "Colaboração com a equipe para projetar e implementar soluções inovadoras com metodologias ágeis.",
+          "Aprendizado contínuo e aprimoramento em princípios de engenharia de software."
+        ]
+      },
+      {
+        "role": "Engenheiro de Dados",
+        "company": "UniSer",
+        "period": "Jul 2025 — Dez 2025",
+        "points": [
+          "Web scraping e ETL para extração de dados do Google Scholar aplicado à Universidade do Envelhecer.",
+          "Automação da coleta e organização de informações acadêmicas (artigos, pesquisas e dados profissionais).",
+          "Conversão dos dados em tabelas Excel padronizadas para apoiar o recrutamento de pesquisadores."
+        ]
+      }
+    ],
+    "events_title": "Palestras & Eventos",
+    "events": [
+      {
+        "role": "Palestrante — Campus Party Brasília",
+        "period": "Jul 2025",
+        "text": "Representando a DW Corp, compartilhei experiências e desafios de um projeto web avançado já em produção, com foco em aprendizados práticos e evolução profissional."
+      },
+      {
+        "role": "Nexo — Hackathon Internacional da MLH",
+        "period": "Jan 2026",
+        "text": "Projeto premiado entre 117 projetos e 356 participantes. Solução de onboarding e compreensão de grandes repositórios de código, com análise automatizada e explicações contextuais."
+      }
+    ]
+  },
+  "projects": {
+    "label": "Projetos selecionados",
+    "title": "Coisas que construí.",
+    "subtitle": "Uma seleção priorizando profundidade técnica. Cada card leva ao código — ou ao produto no ar.",
+    "all_filter": "Todos",
+    "filter_systems": "Sistemas / Rust",
+    "filter_ai": "IA / ML",
+    "filter_web": "Web / Ferramentas",
+    "view_code": "Ver código",
+    "view_live": "Ver site",
+    "view_all": "Ver todos os repositórios no GitHub",
+    "featured": "Destaque"
+  },
+  "activity": {
+    "label": "Atividade no GitHub",
+    "title": "Sempre construindo algo.",
+    "subtitle": "Contribuições dos últimos 12 meses, atualizadas em tempo real a partir da API do GitHub.",
+    "contributions": "contribuições no último ano",
+    "loading": "Carregando atividade...",
+    "error": "Não foi possível carregar a atividade agora.",
+    "less": "menos",
+    "more": "mais",
+    "repos": "Repositórios públicos",
+    "followers": "Seguidores",
+    "stars": "Linguagem principal"
+  },
+  "contact": {
+    "label": "Contato",
+    "title": "Vamos construir algo.",
+    "subtitle": "Aberto a oportunidades, colaborações e boas conversas técnicas.",
+    "email_cta": "Enviar e-mail",
+    "connect": "Conecte-se comigo"
+  },
+  "footer": {
+    "built": "Construído com React, Rust no coração e Ferris de mascote.",
+    "rights": "Todos os direitos reservados."
+  },
+  "chess": {
+    "label": "Fora do código",
+    "title": "Xadrez, quando o compilador descansa.",
+    "targeting": "Mirando",
+    "rapid": "rápido",
+    "blitz": "blitz"
+  }
+}
