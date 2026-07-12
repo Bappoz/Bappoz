@@ -7,10 +7,10 @@ import { useMemo } from "react";
  */
 
 const C: Record<string, string> = {
-  D: "#7a2606", // dark outline
-  O: "#e8590c", // body orange
-  L: "#ff922b", // highlight
-  S: "#b5410b", // shadow orange
+  D: "#a83e12", // dark outline
+  O: "#f46c38", // body orange (accent)
+  L: "#ff9a5c", // highlight
+  S: "#d4501f", // shadow orange
   W: "#fdf3e7", // eye white
   K: "#1c1210", // pupil
 };

@@ -8,6 +8,8 @@ const BLITZ =
 
 export default function Chess() {
   const { t } = useTranslation();
+  // cache-bust so GitHub's raw CDN can't serve a stale (old) version
+  const bust = `?t=${Date.now()}`;
   return (
     <section className="section chess">
       <SectionLabel>{t("chess.label")}</SectionLabel>
@@ -20,10 +22,10 @@ export default function Chess() {
       </Reveal>
       <div className="chess__cards">
         <Reveal className="chess__card" delay={0.08}>
-          <img src={RAPID} alt="Chess.com rapid stats" loading="lazy" />
+          <img src={RAPID + bust} alt="Chess.com rapid stats" loading="lazy" />
         </Reveal>
         <Reveal className="chess__card" delay={0.16}>
-          <img src={BLITZ} alt="Chess.com blitz stats" loading="lazy" />
+          <img src={BLITZ + bust} alt="Chess.com blitz stats" loading="lazy" />
         </Reveal>
       </div>
     </section>
