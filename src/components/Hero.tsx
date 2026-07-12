@@ -102,7 +102,7 @@ export default function Hero({ ready }: { ready: boolean }) {
           <span className="hero__card-ring" aria-hidden="true" />
           <div className="hero__photo">
             <img
-              src="/lucas-cutout.png"
+              src="https://bappoz.github.io/Bappoz/lucas-cutout.png"
               alt="Lucas Andrade Zanetti"
               width={420}
               height={420}

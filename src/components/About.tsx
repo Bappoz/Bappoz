@@ -29,7 +29,7 @@ export default function About() {
         <div className="about__right">
           <Reveal className="about__portrait" delay={0.15}>
             {/* Swap public/about.jpg for the selfie you attached if you prefer it. */}
-            <img src="/about.jpg" alt="Lucas Andrade Zanetti" width={300} height={300} />
+            <img src="https://bappoz.github.io/Bappoz/about.jpg" alt="Lucas Andrade Zanetti" width={300} height={300} />
             <span className="about__portrait-ring" aria-hidden="true" />
           </Reveal>
 
