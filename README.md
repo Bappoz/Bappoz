@@ -5,7 +5,7 @@
   />
 </p>
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=3000&pause=800&color=8B0000&center=true&vCenter=true&width=1200&lines=Hi,+I'am+Lucas+Zanetti;Software+engineer+%40+UnB+(FCTE)" alt="" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=3000&pause=800&color=8B0000&center=true&vCenter=true&width=1500&lines=Hi,+I'am+Lucas+Zanetti;Software+engineer+%40+UnB+(FCTE)" alt="" />
 </div>
 <p align="center">
   𝙰𝙸 𝚜𝚢𝚜𝚝𝚎𝚖𝚜 &nbsp;·&nbsp; 𝚎𝚖𝚋𝚎𝚍𝚍𝚎𝚍 &nbsp;·&nbsp; 𝚏𝚞𝚕𝚕𝚜𝚝𝚊𝚌𝚔 &nbsp;·&nbsp; 𝚕𝚘𝚠-𝚕𝚎𝚟𝚎𝚕 𝚎𝚗𝚐𝚒𝚗𝚎𝚎𝚛𝚒𝚗𝚐
