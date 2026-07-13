@@ -66,7 +66,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    name: "Rustic3dGameEngine",
+    name: "Colibri",
     descPt:
       "Engine de jogo 3D em Rust, refatoração e evolução de um projeto anterior em C++.",
     descEn:
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     tags: ["Rust", "Graphics", "Engine"],
     category: "systems",
     language: "Rust",
-    href: "https://github.com/Bappoz/Rustic3dGameEngine",
+    href: "https://github.com/Bappoz/colibri",
   },
   {
     name: "fundus-classification",
@@ -110,4 +110,17 @@ export const projects: Project[] = [
     language: "JavaScript",
     href: "https://github.com/Bappoz/chess_readme_status",
   },
+  
+  {
+    name: "Glioma Segmentation and Graduation",
+    descPt:
+      "Pipeline de duas etapas acopladas que (A) segmenta as sub-regiões do tumor (necrose/NCR, edema/ED, tumor ativo/ET) e (B) gradua a lesão (LGG × HGG) a partir da máscara segmentada.",
+    descEn:
+      "A coupled two-stage pipeline that (A) segments tumor sub-regions (necrosis/NCR, edema/ED, active tumor/ET) and (B) grades the lesion (LGG vs. HGG) based on the segmented mask.",
+    tags: ["Python", "Computer Vision", "Machine Learning", "Math"],
+    category: "ai",
+    language: "Python",
+    href: "https://github.com/Bappoz/glioma-seg-grad",
+  },
 ];
+
