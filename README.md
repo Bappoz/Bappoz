@@ -11,7 +11,7 @@
   𝙰𝙸 𝚜𝚢𝚜𝚝𝚎𝚖𝚜 &nbsp;·&nbsp; 𝚎𝚖𝚋𝚎𝚍𝚍𝚎𝚍 &nbsp;·&nbsp; 𝚏𝚞𝚕𝚕𝚜𝚝𝚊𝚌𝚔 &nbsp;·&nbsp; 𝚕𝚘𝚠-𝚕𝚎𝚟𝚎𝚕 𝚎𝚗𝚐𝚒𝚗𝚎𝚎𝚛𝚒𝚗𝚐
 </p>
 <p align="center">
-  <img src="./image.png" width="60" style="border-radius:50%"/>
+  <img src="./image.png" width=100" style="border-radius:50%"/>
 </p>
 <p align="center">
   <img 
