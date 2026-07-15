@@ -78,9 +78,6 @@ export default function Experience() {
 
       <Reveal className="work__events-title mono">{t("work.gallery_title")}</Reveal>
       <GalleryCarousel />
-      <Reveal className="gallery__hint mono" delay={0.1}>
-        {t("work.gallery_hint")}
-      </Reveal>
     </section>
   );
 }

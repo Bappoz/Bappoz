@@ -1,9 +1,14 @@
 // Event / talk photos.
 // 1. Drop your images into  public/gallery/
-// 2. List them here (order = carousel order). Landscape ~4:3 works best.
+// 2. List the filenames here (order = carousel order). Landscape ~4:3 works best.
 // While this list is empty, numbered placeholder slots are shown.
-export const gallery: string[] = [
-  // "https://bappoz.github.io/Bappoz/gallery/campus-party-1.jpg",
-  // "https://bappoz.github.io/Bappoz/gallery/campus-party-2.jpg",
-  // "https://bappoz.github.io/Bappoz/gallery/hacktown-1.jpg",
+const files: string[] = [
+  "campus-party-convite.jpeg",
+  "serjao-campus-party.jpeg",
+  "obrigado-MLH.jpeg",
 ];
+
+// Resolve against Vite's base so it works both locally (dev) and on GitHub Pages.
+export const gallery: string[] = files.map(
+  (f) => `${import.meta.env.BASE_URL}gallery/${f}`,
+);
