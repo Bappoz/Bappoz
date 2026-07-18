@@ -4,7 +4,7 @@ import { gallery } from "../data/gallery";
 export default function GalleryCarousel() {
   const items: (string | null)[] = gallery.length
     ? gallery
-    : Array.from({ length: 8 }, () => null);
+    : Array.from({ length: 5 }, () => null);
   const n = items.length;
 
   return (

@@ -81,7 +81,7 @@ export default function FerrisCrab({
   const legs = useMemo(() => {
     // six little legs under the shell
     const arr: Cell[] = [];
-    const legXs = [8, 11, 14, 17, 20, 23];
+    const legXs = [8, 11, 14, 17, 20];
     legXs.forEach((lx, i) => {
       arr.push({ x: lx, y: 12, fill: C.D });
       arr.push({ x: lx, y: 13, fill: C.D });

@@ -967,7 +967,7 @@ main {
 
 /* semi-circular infinite 3D gallery carousel */
 .gallery {
-  --n: 8;
+  --n: 5;
   --radius: min(46vw, 380px);
   perspective: 1300px;
   height: clamp(230px, 32vw, 320px);
@@ -980,7 +980,7 @@ main {
   height: 100%;
   margin: 0 auto;
   transform-style: preserve-3d;
-  animation: gallery-spin 52s linear infinite;
+  animation: gallery-spin 30s linear infinite;
 }
 .gallery:hover .gallery__ring {
   animation-play-state: paused;
