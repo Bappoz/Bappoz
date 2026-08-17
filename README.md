@@ -49,7 +49,7 @@
 </p>
 <br>
 <div align="center">
-♟ &nbsp; 𝚝𝚊𝚛𝚐𝚎𝚝𝚒𝚗𝚐 <strong>𝟷𝟻𝟶𝟶 𝚛𝚊𝚙𝚒𝚍</strong> · <strong>𝟾𝟻𝟶 𝚋𝚕𝚒𝚝𝚣</strong> &nbsp; ♟
+♟ &nbsp; Aiming for <strong>𝟷𝟻𝟶𝟶 𝚛𝚊𝚙𝚒𝚍</strong> · <strong>𝟾𝟻𝟶 𝚋𝚕𝚒𝚝𝚣</strong> &nbsp; ♟
 <br><br>
 
 <img src="https://raw.githubusercontent.com/Bappoz/chess_readme_status/main/assets/chess-stats-rapid-hero-wood.svg" alt="Rapid" width="70%" />
