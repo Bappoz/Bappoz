@@ -102,6 +102,17 @@ export const projects: Project[] = [
     href: "https://github.com/Bappoz/colibri",
   },
   {
+    name: "image-compressor-quadtree",
+    descPt:
+      "Compressor de imagens em escala de cinza sobre Quadtree: blocos homogêneos viram folhas com a cor média, heterogêneos são subdivididos por limiar de variância. Inclui busca espacial por pixel em O(profundidade) — com limiar 20, ~98% de redução mantendo PSNR acima de 30 dB. Trabalho de Estruturas de Dados 2.",
+    descEn:
+      "Grayscale image compressor built on a Quadtree: homogeneous blocks collapse into leaves holding the average color, heterogeneous ones are split by a variance threshold. Includes O(depth) spatial pixel lookup — at threshold 20, ~98% size reduction while keeping PSNR above 30 dB. Data Structures 2 course project.",
+    tags: ["Python", "Data Structures", "Algorithms"],
+    category: "systems",
+    language: "Python",
+    href: "https://github.com/Bappoz/image-compressor-quadtree",
+  },
+  {
     name: "fundus-classification",
     descPt:
       "Pipeline de Deep Learning para detecção automática de retinopatia hipertensiva em imagens de fundoscopia ocular.",
@@ -123,6 +134,17 @@ export const projects: Project[] = [
     category: "ai",
     language: "TypeScript",
     href: "https://github.com/Bappoz/voxForge-3d-assistant",
+  },
+  {
+    name: "My-Claude-Skills",
+    descPt:
+      "Coleção curada de 71 skills para Claude Code em 8 tópicos (design systems, engenharia, orquestração de agentes, produto). Cada skill é uma pasta autossuficiente com SKILL.md, gatilhos de ativação, tokens concretos e fontes externas reais para o modelo consultar antes de gerar output.",
+    descEn:
+      "A curated collection of 71 Claude Code skills across 8 topics (design systems, engineering, agent orchestration, product). Each skill is a self-contained folder with a SKILL.md, activation triggers, concrete tokens and real external sources the model pulls from before producing output.",
+    tags: ["Claude Code", "AI Tooling", "Skills"],
+    category: "ai",
+    language: "Markdown",
+    href: "https://github.com/Bappoz/My-Claude-Skills",
   },
   {
     name: "chess_readme_status",
