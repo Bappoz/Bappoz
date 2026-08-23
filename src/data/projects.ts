@@ -29,6 +29,31 @@ export const projects: Project[] = [
     award: "MLH Hacktown Winner",
   },
   {
+    name: "Farol",
+    descPt:
+      "Central de carreira local-first: coleta vagas remotas em seis portais, pontua cada uma contra o perfil do usuário, acompanha o pipeline de candidaturas, gera currículos direcionados em PDF e calcula o roadmap de estudos. Servidor em 127.0.0.1, dados em SQLite, nada sai da máquina.",
+    descEn:
+      "Local-first career hub: scrapes remote jobs from six boards, scores each one against the user's profile, tracks the application pipeline, generates targeted PDF resumes and computes a study roadmap. Server bound to 127.0.0.1, SQLite storage, nothing leaves the machine.",
+    tags: ["Python", "FastAPI", "Local-first"],
+    category: "web",
+    language: "Python",
+    href: "https://github.com/Bappoz/Farol",
+    featured: true,
+  },
+  {
+    name: "bpmn-flow",
+    descPt:
+      "Biblioteca modular que transforma diagramas BPMN 2.0 em automação de processos: parser para modelo normalizado, motor de execução por tokens (gateways, eventos de borda, subprocessos, terminate) e viewer interativo. Monorepo com core, viewer, server, CLI e playground.",
+    descEn:
+      "Modular library that turns BPMN 2.0 diagrams into process automation: parser to a normalized model, token-based execution engine (gateways, boundary events, subprocesses, terminate) and an interactive viewer. Monorepo with core, viewer, server, CLI and playground.",
+    tags: ["TypeScript", "Monorepo", "Workflow Engine"],
+    category: "web",
+    language: "TypeScript",
+    href: "https://github.com/Bappoz/bpmn-flow",
+    live: "https://bappoz.github.io/bpmn-flow/",
+    featured: true,
+  },
+  {
     name: "Crusty",
     descPt:
       "Compilador escrito em Rust, desenvolvido para a disciplina de Compiladores 1. Lexer, parser e análise semântica com foco em corretude.",
