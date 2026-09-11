@@ -22,7 +22,7 @@
 <div align="center">
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=3000&color=8B0000&center=true&vCenter=true&width=600&lines=%3E+connect+with+me" />
 <br>
-<a href="https://github.com/Bappoz">
+<a href="bappoz.github.io/Bappoz/">
 <img src="https://img.shields.io/badge/GITHUB-4A0E0E?style=for-the-badge&logo=github&logoColor=white"/>
 </a> 
 <a href="https://linkedin.com/in/lucas-andrade-zanetti">
