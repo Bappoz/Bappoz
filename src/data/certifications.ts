@@ -3,6 +3,13 @@ export const certificateSource =
   "https://www.linkedin.com/in/lucas-andrade-zanetti/details/certifications/";
 export const certifications = [
   {
+    name: "Participação no iFood CAMP",
+    nameEn: "iFood CAMP participation",
+    issuer: "iFood",
+    mark: "iFood",
+    date: "2026-09",
+  },
+  {
     name: "Hackathon PMI-DF 2026",
     nameEn: "PMI-DF Hackathon 2026",
     issuer: "PMI Distrito Federal Student Club",
