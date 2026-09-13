@@ -57,9 +57,9 @@ export default function Hero() {
           <article className="profile-card border-detail">
             <div className="profile-image">
               <img
-                src={asset("portraits/lucas.webp")}
-                width={720}
-                height={720}
+                src={asset("portraits/lucas.jpeg")}
+                width={1000}
+                height={1024}
                 alt="Lucas Andrade Zanetti"
               />
               <span className="profile-image-tag">
