@@ -1,99 +1,335 @@
 import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { AnimatePresence, motion } from "framer-motion";
-import { Reveal, SectionLabel } from "./Reveal";
+import {
+  ArrowUpRight,
+  ChevronLeft,
+  ChevronRight,
+  Code2,
+  Cpu,
+  GitBranch,
+  Network,
+  Sparkles,
+  Trophy,
+} from "lucide-react";
 import { projects, type Category } from "../data/projects";
-import { ArrowIcon, CodeIcon, BrandIcon } from "./icons/Icons";
+import contributors from "../data/contributors.json";
+import { Reveal, SectionLabel } from "./Reveal";
+import { ExternalLink, Tooltip } from "./Ui";
+import { asset } from "../lib/utils";
 
-const filters: ("all" | Category)[] = ["all", "systems", "ai", "web"];
+const PAGE_SIZE = 3;
+const people = contributors as Record<
+  string,
+  { login: string; avatar: string; href: string }[]
+>;
+const categoryIcons = { systems: Cpu, ai: Sparkles, web: Network };
+
+function Avatar({
+  person,
+}: {
+  person: { login: string; avatar: string; href: string };
+}) {
+  const [failed, setFailed] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  return (
+    <Tooltip text={person.login}>
+      <a
+        className="contributor-avatar"
+        href={person.href}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={`${person.login} — GitHub`}
+      >
+        {(!loaded || failed) && (
+          <span className="avatar-initials">
+            {person.login.slice(0, 2).toUpperCase()}
+          </span>
+        )}
+        {!failed && (
+          <img
+            src={person.avatar + "&s=80"}
+            alt={person.login}
+            width={36}
+            height={36}
+            loading="lazy"
+            onLoad={() => setLoaded(true)}
+            onError={() => setFailed(true)}
+          />
+        )}
+      </a>
+    </Tooltip>
+  );
+}
 
 export default function Projects() {
   const { t, i18n } = useTranslation();
-  const [active, setActive] = useState<"all" | Category>("all");
-  const isPt = i18n.language.startsWith("pt");
-
+  const [filter, setFilter] = useState<Category | "all">("all");
+  const [page, setPage] = useState(0);
+  const [active, setActive] = useState(0);
+  const [showAllPeople, setShowAllPeople] = useState(false);
   const list = useMemo(
-    () => (active === "all" ? projects : projects.filter((p) => p.category === active)),
-    [active]
+    () => projects.filter((p) => filter === "all" || p.category === filter),
+    [filter],
   );
-
+  const pages = Math.ceil(list.length / PAGE_SIZE);
+  const visible = list.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  const selected = visible[active] ?? visible[0];
+  const repo = selected.href.replace("https://github.com/", "");
+  const team = people[repo] ?? [];
+  const select = (i: number) => {
+    setActive(i);
+    setShowAllPeople(false);
+  };
+  const changePage = (i: number) => {
+    setPage(i);
+    select(0);
+  };
+  const pt = i18n.language.startsWith("pt");
   return (
-    <section className="section projects" id="projects">
-      <SectionLabel>{t("projects.label")}</SectionLabel>
-      <Reveal as="h2" className="section-title">
-        {t("projects.title")}
-      </Reveal>
-      <Reveal className="section-sub" delay={0.05}>
-        {t("projects.subtitle")}
-      </Reveal>
-
-      <Reveal className="projects__filters" delay={0.1}>
-        {filters.map((f) => (
-          <button
-            key={f}
-            className={`filter-chip ${active === f ? "is-active" : ""}`}
-            onClick={() => setActive(f)}
-          >
-            {f === "all" ? t("projects.all_filter") : t(`projects.filter_${f}`)}
+    <section id="projects" className="projects section-shell section-space">
+      <SectionLabel number="01">{t("projects.label")}</SectionLabel>
+      <div className="section-heading">
+        <Reveal as="h2">{t("design.projectsTitle")}</Reveal>
+        <p>{t("design.projectsIntro")}</p>
+      </div>
+      <div className="project-toolbar">
+        <div
+          className="filter-list"
+          role="group"
+          aria-label={t("design.filterLabel")}
+        >
+          {(["all", "web", "systems", "ai"] as const).map((f) => (
+            <button
+              key={f}
+              aria-pressed={filter === f}
+              className={filter === f ? "active" : ""}
+              onClick={() => {
+                setFilter(f);
+                changePage(0);
+              }}
+            >
+              {t(f === "all" ? "projects.all_filter" : `projects.filter_${f}`)}
+              {f === "all" && <span>{projects.length}</span>}
+            </button>
+          ))}
+        </div>
+        <span className="project-count">
+          {String(page * PAGE_SIZE + 1).padStart(2, "0")} —{" "}
+          {String(Math.min((page + 1) * PAGE_SIZE, list.length)).padStart(
+            2,
+            "0",
+          )}{" "}
+          / {String(list.length).padStart(2, "0")}
+        </span>
+      </div>
+      {pages > 1 && (
+        <div className="project-discovery">
+          <span>{t("design.pageOf", { page: page + 1, pages })}</span>
+          <button onClick={() => changePage((page + 1) % pages)}>
+            {t("design.moreProjects")}
+            <span className="discovery-arrows" aria-hidden="true">
+              <ChevronRight size={17} />
+              <ChevronRight size={17} />
+            </span>
           </button>
-        ))}
-      </Reveal>
-
-      <motion.div layout className="projects__grid">
-        <AnimatePresence mode="popLayout">
-          {list.map((p) => {
-            const primary = p.live ?? p.href;
-            return (
-              <motion.a
-                layout
-                key={p.name}
-                href={primary}
-                target="_blank"
-                rel="noreferrer"
-                className={`project-card ${p.featured ? "project-card--featured" : ""}`}
-                initial={{ opacity: 0, scale: 0.96 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.96 }}
-                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                data-cursor
+          <div className="project-page-track" aria-hidden="true">
+            {Array.from({ length: pages }, (_, i) => (
+              <span key={i} className={i === page ? "active" : ""} />
+            ))}
+          </div>
+        </div>
+      )}
+      <div
+        className="elastic-gallery"
+        key={`${filter}-${page}`}
+        role="group"
+        aria-label={t("projects.label")}
+      >
+        {visible.map((p, i) => {
+          const Icon = categoryIcons[p.category];
+          const isActive = i === active;
+          return (
+            <article
+              key={p.href}
+              className={`elastic-card visual-${p.visual?.kind || "default"} project-${p.category} ${isActive ? "is-active" : ""}`}
+              style={{ "--card-index": i } as React.CSSProperties}
+            >
+              <button
+                className="project-select"
+                aria-label={t("design.selectProject", { name: p.name })}
+                aria-pressed={isActive}
+                aria-controls="project-details"
+                onClick={() => select(i)}
+                onFocus={() => select(i)}
+                onPointerEnter={(e) => {
+                  if (e.pointerType === "mouse") select(i);
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+                    e.preventDefault();
+                    const next =
+                      (i + (e.key === "ArrowRight" ? 1 : -1) + visible.length) %
+                      visible.length;
+                    e.currentTarget
+                      .closest(".elastic-gallery")
+                      ?.querySelectorAll<HTMLButtonElement>(".project-select")
+                      [next]?.focus();
+                  }
+                }}
               >
-                <div className="project-card__top">
-                  <span className="project-card__lang mono">{p.language}</span>
-                  {p.award && <span className="project-card__award">{p.award}</span>}
-                  <span className="project-card__go">
-                    {p.live ? <ArrowIcon size={18} /> : <CodeIcon size={18} />}
+                <div className="project-top">
+                  <span className="project-index">
+                    {String(page * PAGE_SIZE + i + 1).padStart(2, "0")}
                   </span>
+                  <Icon size={20} strokeWidth={1.5} />
                 </div>
-
-                <h3 className="project-card__name">{p.name.replace(/[-_]/g, " ")}</h3>
-                <p className="project-card__desc">{isPt ? p.descPt : p.descEn}</p>
-
-                <div className="project-card__foot">
-                  <div className="project-card__tags">
-                    {p.tags.map((tag) => (
-                      <span key={tag} className="tag mono">
-                        {tag}
-                      </span>
-                    ))}
+                <div className="project-art" aria-hidden="true">
+                  {p.visual ? (
+                    <img
+                      className={
+                        ["screenshot", "figure", "cover"].includes(
+                          p.visual.kind,
+                        )
+                          ? `project-screenshot project-${p.visual.kind}`
+                          : `project-logo ${p.visual.kind}`
+                      }
+                      src={asset(p.visual.src)}
+                      alt=""
+                      width={p.visual.kind === "screenshot" ? 1000 : 320}
+                      height={180}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="project-art-symbol">
+                      <Icon strokeWidth={0.75} />
+                    </div>
+                  )}
+                  {(!p.visual || p.visual.kind === "farol-logo") && (
+                    <span>{p.coverTitle || p.name}</span>
+                  )}
+                  <div className="project-art-line">
+                    <span>{p.language}</span>
+                    <i />
+                    <Code2 size={16} />
                   </div>
-                  <span className="project-card__cta mono">
-                    {p.live ? t("projects.view_live") : t("projects.view_code")}
+                </div>
+                <div className="project-bottom">
+                  <div>
+                    <span className="project-kind">
+                      {t(`design.category_${p.category}`)}
+                    </span>
+                    <h3>{p.name}</h3>
+                  </div>
+                  <span className="project-expand">
+                    <ArrowUpRight size={20} />
                   </span>
                 </div>
-                <span className="project-card__glow" aria-hidden="true" />
-              </motion.a>
-            );
-          })}
-        </AnimatePresence>
-      </motion.div>
-
-      <Reveal className="projects__all" delay={0.1}>
-        <a href="https://github.com/Bappoz?tab=repositories" target="_blank" rel="noreferrer" className="btn btn--ghost" data-magnetic>
-          <BrandIcon name="github" size={18} />
-          {t("projects.view_all")}
-          <ArrowIcon />
-        </a>
-      </Reveal>
+              </button>
+            </article>
+          );
+        })}
+      </div>
+      <div
+        id="project-details"
+        className="project-details"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        <div className="project-description">
+          <div className="project-detail-title">
+            <h3>{selected.name}</h3>
+            {selected.award && (
+              <span className="award-chip">
+                <Trophy size={13} />
+                {selected.award}
+              </span>
+            )}
+          </div>
+          <p>{pt ? selected.descPt : selected.descEn}</p>
+          <div className="tag-list">
+            {selected.tags.map((tag) => (
+              <span key={tag}>{tag}</span>
+            ))}
+          </div>
+        </div>
+        <div className="project-meta">
+          <div className="project-links">
+            {selected.live && (
+              <ExternalLink
+                href={selected.live}
+                className="button button-primary"
+              >
+                {t("projects.view_live")}
+              </ExternalLink>
+            )}
+            <ExternalLink
+              href={selected.href}
+              className="button button-outline"
+            >
+              <GitBranch size={15} />
+              {t("projects.view_code")}
+            </ExternalLink>
+          </div>
+          <div className="project-team">
+            <span className="team-label">{t("design.builtWith")}</span>
+            <div className="avatar-circles">
+              {(showAllPeople ? team : team.slice(0, 5)).map((person) => (
+                <Avatar key={person.login} person={person} />
+              ))}
+              {team.length > 5 && !showAllPeople && (
+                <button
+                  className="avatar-more"
+                  onClick={() => setShowAllPeople(true)}
+                  aria-label={t("design.moreContributors", {
+                    count: team.length - 5,
+                  })}
+                >
+                  +{team.length - 5}
+                </button>
+              )}
+              {team.length === 0 && (
+                <ExternalLink href={`${selected.href}/graphs/contributors`}>
+                  {t("design.viewContributors")}
+                </ExternalLink>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="pagination-row">
+        <ExternalLink href="https://github.com/Bappoz?tab=repositories">
+          {t("design.allRepos")}
+        </ExternalLink>
+        <nav className="pagination" aria-label={t("design.pagination")}>
+          <button
+            disabled={page === 0}
+            aria-label={t("design.previous")}
+            onClick={() => changePage(page - 1)}
+          >
+            <ChevronLeft size={17} />
+          </button>
+          {Array.from({ length: pages }, (_, i) => (
+            <button
+              key={i}
+              aria-label={t("design.page", { number: i + 1 })}
+              aria-current={i === page ? "page" : undefined}
+              onClick={() => changePage(i)}
+            >
+              {i + 1}
+            </button>
+          ))}
+          <button
+            disabled={page === pages - 1}
+            aria-label={t("design.next")}
+            onClick={() => changePage(page + 1)}
+          >
+            <span className="next-page-label">
+              {t("design.nextCollection")}
+            </span>
+            <ChevronRight size={17} />
+          </button>
+        </nav>
+      </div>
     </section>
   );
 }

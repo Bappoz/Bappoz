@@ -1,0 +1,66 @@
+// Public LinkedIn profile, retrieved 2026-09-11. The source does not expose direct credential URLs.
+export const certificateSource =
+  "https://www.linkedin.com/in/lucas-andrade-zanetti/details/certifications/";
+export const certifications = [
+  {
+    name: "Hackathon PMI-DF 2026",
+    nameEn: "PMI-DF Hackathon 2026",
+    issuer: "PMI Distrito Federal Student Club",
+    mark: "PMI",
+    date: "2026-09",
+    id: "11 horas",
+    idEn: "11 hours",
+  },
+  {
+    name: "AI Capabilities and Limitations",
+    issuer: "Anthropic",
+    logo: "anthropic",
+    date: "2026-08",
+    id: "iqyq36kconzp",
+  },
+  {
+    name: "Claude 101",
+    issuer: "Anthropic",
+    logo: "anthropic",
+    date: "2026-08",
+    id: "ijmc4tm58ssu",
+  },
+  {
+    name: "Claude Code in Action",
+    issuer: "Anthropic",
+    logo: "anthropic",
+    date: "2026-08",
+    id: "hpx28wbhjh28",
+  },
+  {
+    name: "Agentic LLMs: fundamentos e aplicações",
+    nameEn: "Agentic LLMs: foundations and applications",
+    issuer: "Universidade de Brasília",
+    logo: "unb",
+    date: "2026-06",
+    id: "b46edad286 · doc. 3206454",
+  },
+  {
+    name: "XIII Maratona UnB de Programação",
+    nameEn: "13th UnB Programming Marathon",
+    issuer: "Universidade de Brasília",
+    logo: "unb",
+    date: "2025-11",
+    id: "b0f7443fe8",
+  },
+  {
+    name: "Palestrante Campus Party",
+    nameEn: "Campus Party Speaker",
+    issuer: "Campus Party Brasil",
+    logo: "campus-party",
+    date: "2025-06",
+  },
+  {
+    name: "Proficiência em inglês",
+    nameEn: "English proficiency",
+    issuer: "Cambridge English",
+    logo: "cambridge",
+    date: "2021-12",
+    id: "B7100930",
+  },
+];

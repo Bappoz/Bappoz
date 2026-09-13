@@ -1,19 +1,19 @@
+import { ArrowUp } from "lucide-react";
 import { useTranslation } from "react-i18next";
-
+import { asset } from "../lib/utils";
 export default function Footer() {
   const { t } = useTranslation();
-  const year = new Date().getFullYear();
   return (
-    <footer className="footer">
-      <div className="footer__inner">
-        <div className="footer__brand">
-          <span className="footer__mark">Lucas Andrade Zanetti</span>
-          <span className="footer__built mono">{t("footer.built")}</span>
-        </div>
-        <span className="footer__copy mono">
-          © {year} · {t("footer.rights")}
-        </span>
-      </div>
+    <footer className="footer section-shell">
+      <a className="wordmark" href={asset("")}>
+        <img src={asset("brand/zanetti.webp")} alt="" width={38} height={29} />
+        Zanetti<span className="wordmark-dot">.</span>
+      </a>
+      <span>© {new Date().getFullYear()} Lucas Andrade Zanetti</span>
+      <a href="#" className="text-link">
+        {t("design.backTop")}
+        <ArrowUp size={15} />
+      </a>
     </footer>
   );
 }

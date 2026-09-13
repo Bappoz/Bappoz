@@ -10,6 +10,17 @@ export interface Project {
   href: string; // code repo
   live?: string; // live product (overrides primary CTA target)
   featured?: boolean;
+  visual?: {
+    src: string;
+    kind:
+      | "nexo-logo"
+      | "farol-logo"
+      | "screenshot"
+      | "brand-logo"
+      | "cover"
+      | "figure";
+  };
+  coverTitle?: string;
   award?: string;
 }
 
@@ -17,6 +28,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     name: "Nexo",
+    visual: { src: "projects/nexo-logo.webp", kind: "nexo-logo" },
     descPt:
       "Plataforma de IA que transforma repositórios do GitHub em documentação interativa — análise automatizada, visualização de tech stack e podcasts explicando qualquer codebase. Premiado no MLH International Hacktown.",
     descEn:
@@ -30,6 +42,7 @@ export const projects: Project[] = [
   },
   {
     name: "Farol",
+    visual: { src: "projects/farol-logo.webp", kind: "farol-logo" },
     descPt:
       "Central de carreira local-first: coleta vagas remotas em seis portais, pontua cada uma contra o perfil do usuário, acompanha o pipeline de candidaturas, gera currículos direcionados em PDF e calcula o roadmap de estudos. Servidor em 127.0.0.1, dados em SQLite, nada sai da máquina.",
     descEn:
@@ -42,6 +55,7 @@ export const projects: Project[] = [
   },
   {
     name: "bpmn-flow",
+    visual: { src: "projects/bpmn-preview.webp", kind: "screenshot" },
     descPt:
       "Biblioteca modular que transforma diagramas BPMN 2.0 em automação de processos: parser para modelo normalizado, motor de execução por tokens (gateways, eventos de borda, subprocessos, terminate) e viewer interativo. Monorepo com core, viewer, server, CLI e playground.",
     descEn:
@@ -67,6 +81,7 @@ export const projects: Project[] = [
   },
   {
     name: "Crianex",
+    visual: { src: "projects/crianex-logo.webp", kind: "brand-logo" },
     descPt:
       "Projeto da disciplina de Engenharia de Requisitos (REQ-T2), construído em Svelte. Produto completo com processo de requisitos documentado.",
     descEn:
@@ -80,6 +95,7 @@ export const projects: Project[] = [
   },
   {
     name: "utxo-blockchain",
+    coverTitle: "UTXO",
     descPt:
       "Blockchain robusta e segura usando o modelo UTXO do Bitcoin, construída em Rust.",
     descEn:
@@ -92,10 +108,11 @@ export const projects: Project[] = [
   },
   {
     name: "Colibri",
+    visual: { src: "projects/colibri.webp", kind: "brand-logo" },
     descPt:
-      "Engine de jogo 3D em Rust, refatoração e evolução de um projeto anterior em C++.",
+      "Engine 2D/3D em Rust construída do zero: renderização de software, rasterização paralela, matemática 3D própria e entidades geracionais. Evolui por etapas testáveis em direção a uma arquitetura ECS.",
     descEn:
-      "A 3D game engine in Rust — a refactor and evolution of an earlier C++ project.",
+      "A 2D/3D Rust engine built from scratch: software rendering, parallel rasterization, custom 3D math and generational entities. Evolving through testable stages toward an ECS architecture.",
     tags: ["Rust", "Graphics", "Engine"],
     category: "systems",
     language: "Rust",
@@ -103,6 +120,8 @@ export const projects: Project[] = [
   },
   {
     name: "image-compressor-quadtree",
+    visual: { src: "projects/quadtree.webp", kind: "figure" },
+    coverTitle: "Quadtree",
     descPt:
       "Compressor de imagens em escala de cinza sobre Quadtree: blocos homogêneos viram folhas com a cor média, heterogêneos são subdivididos por limiar de variância. Inclui busca espacial por pixel em O(profundidade) — com limiar 20, ~98% de redução mantendo PSNR acima de 30 dB. Trabalho de Estruturas de Dados 2.",
     descEn:
@@ -114,6 +133,7 @@ export const projects: Project[] = [
   },
   {
     name: "fundus-classification",
+    coverTitle: "Fundus",
     descPt:
       "Pipeline de Deep Learning para detecção automática de retinopatia hipertensiva em imagens de fundoscopia ocular.",
     descEn:
@@ -126,6 +146,7 @@ export const projects: Project[] = [
   },
   {
     name: "voxForge-3d-assistant",
+    coverTitle: "VoxForge",
     descPt:
       "Modelagem 3D de formas com visualização e assistente de voz por IA para criação de shapes.",
     descEn:
@@ -137,6 +158,8 @@ export const projects: Project[] = [
   },
   {
     name: "My-Claude-Skills",
+    visual: { src: "logos/claude.svg", kind: "brand-logo" },
+    coverTitle: "Claude Skills",
     descPt:
       "Coleção curada de 71 skills para Claude Code em 8 tópicos (design systems, engenharia, orquestração de agentes, produto). Cada skill é uma pasta autossuficiente com SKILL.md, gatilhos de ativação, tokens concretos e fontes externas reais para o modelo consultar antes de gerar output.",
     descEn:
@@ -148,6 +171,8 @@ export const projects: Project[] = [
   },
   {
     name: "chess_readme_status",
+    visual: { src: "projects/chess.webp", kind: "cover" },
+    coverTitle: "Chess Stats",
     descPt:
       "Ferramenta que gera cards de status com estatísticas de xadrez da Chess.com (rapid, blitz, bullet, daily) com múltiplos templates.",
     descEn:
@@ -157,9 +182,11 @@ export const projects: Project[] = [
     language: "JavaScript",
     href: "https://github.com/Bappoz/chess_readme_status",
   },
-  
+
   {
     name: "Glioma Segmentation and Graduation",
+    visual: { src: "projects/glioma.webp", kind: "figure" },
+    coverTitle: "Glioma",
     descPt:
       "Pipeline de duas etapas acopladas que (A) segmenta as sub-regiões do tumor (necrose/NCR, edema/ED, tumor ativo/ET) e (B) gradua a lesão (LGG × HGG) a partir da máscara segmentada.",
     descEn:
@@ -170,4 +197,3 @@ export const projects: Project[] = [
     href: "https://github.com/Bappoz/glioma-seg-grad",
   },
 ];
-

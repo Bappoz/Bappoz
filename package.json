@@ -5,14 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "build": "tsc --noEmit && vite build && node scripts/after-build.mjs",
+    "preview": "vite preview",
+    "sync:contributors": "node scripts/sync-contributors.mjs"
   },
   "dependencies": {
+    "@fontsource-variable/dm-sans": "^5.3.0",
+    "@fontsource-variable/manrope": "^5.3.0",
     "framer-motion": "^11.11.17",
     "i18next": "^23.16.5",
     "i18next-browser-languagedetector": "^8.0.0",
     "lenis": "^1.1.18",
+    "lucide-react": "^1.45.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-i18next": "^15.1.1"

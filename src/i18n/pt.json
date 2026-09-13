@@ -9,7 +9,7 @@
     "resume": "Currículo"
   },
   "hero": {
-    "role": "Engenheiro de Software & Dados",
+    "role": "Engenheiro de Software & IA & Dados",
     "location": "Brasília, Brasil",
     "headline_1": "Construo produtos",
     "headline_accent": "de ponta a ponta",
@@ -20,9 +20,18 @@
     "scroll": "role para explorar",
     "available": "Disponível para novos projetos",
     "stats": [
-      { "v": "+40", "l": "Repositórios públicos" },
-      { "v": "08", "l": "Linguagens" },
-      { "v": "6º", "l": "Semestre · Eng. de Software UnB" }
+      {
+        "v": "+40",
+        "l": "Repositórios públicos"
+      },
+      {
+        "v": "08",
+        "l": "Linguagens"
+      },
+      {
+        "v": "6º",
+        "l": "Semestre · Eng. de Software UnB"
+      }
     ],
     "card_systems": "Sistemas de baixo nível · Rust",
     "card_ai": "IA · Fullstack · Dados"
@@ -58,39 +67,102 @@
     "present": "Presente",
     "jobs": [
       {
+        "role": "Monitor de Requisitos de Software",
+        "company": "Universidade de Brasília",
+        "period": "Ago 2026 — Presente",
+        "intro": "Monitoria voluntária atual na disciplina de Engenharia de Requisitos, apoiando a aprendizagem e a prática dos fundamentos da área.",
+        "points": [
+          "Apoio aos estudantes na compreensão e aplicação de elicitação, análise, especificação, validação e gerenciamento de requisitos.",
+          "Esclarecimento de dúvidas e acompanhamento dos conteúdos, com orientação durante exercícios e discussões da disciplina.",
+          "Troca contínua sobre a natureza da engenharia de requisitos e as decisões que tornam um produto mais claro e viável."
+        ],
+        "tags": [
+          "Monitoria voluntária",
+          "Engenharia de Requisitos",
+          "Educação"
+        ]
+      },
+      {
+        "company": "CrianexHub",
+        "role": "Project Manager & Chief Manager",
+        "period": "2026 · UnB",
+        "intro": "Plataforma administrativa centralizada e vitrine digital bilíngue para a software house Crianex.",
+        "points": [
+          "Liderança do projeto e organização da equipe, conectando o planejamento às entregas por funcionalidade.",
+          "Documentação da interação equipe–cliente e da cadência de cerimônias, com responsabilidades rastreáveis.",
+          "FDD + Kanban: roadmap e modelagem no Miro; issues, limites de WIP e revisões no GitHub Projects.",
+          "Alinhamentos assíncronos no Discord e validações parciais e formais com o cliente a cada iteração."
+        ],
+        "href": "https://github.com/Bappoz/CrianexHub",
+        "tags": [
+          "FDD + Kanban",
+          "Miro",
+          "GitHub Projects"
+        ]
+      },
+      {
         "role": "Engenheiro de Software",
         "company": "DW Corp",
         "period": "Abr 2025 — Presente",
+        "intro": "Consultoria brasileira de tecnologia que desenvolve software sob medida, integrações e soluções digitais para empresas que buscam escalar com eficiência.",
         "points": [
-          "Desenvolvimento e implantação de aplicativos, garantindo código e funcionalidade de alta qualidade.",
-          "Colaboração com a equipe para projetar e implementar soluções inovadoras com metodologias ágeis.",
-          "Aprendizado contínuo e aprimoramento em princípios de engenharia de software."
-        ]
+          "Desenvolvimento e implantação de aplicações e integrações, acompanhando as entregas da concepção à entrada em produção.",
+          "Colaboração com a equipe na análise de necessidades, desenho de soluções e evolução de funcionalidades com métodos ágeis.",
+          "Cuidado contínuo com qualidade de código, confiabilidade e manutenção para sustentar produtos de alto valor agregado."
+        ],
+        "href": "https://dwcorp.com.br/en/terms",
+        "tags": ["Software sob medida", "Integrações", "Métodos ágeis"]
       },
       {
         "role": "Engenheiro de Dados",
         "company": "UniSer",
         "period": "Jul 2025 — Dez 2025",
+        "intro": "Projeto de extensão da Universidade de Brasília voltado à educação, à cidadania e à qualidade de vida de pessoas maduras e idosas.",
         "points": [
-          "Web scraping e ETL para extração de dados do Google Scholar aplicado à Universidade do Envelhecer.",
-          "Automação da coleta e organização de informações acadêmicas (artigos, pesquisas e dados profissionais).",
-          "Conversão dos dados em tabelas Excel padronizadas para apoiar o recrutamento de pesquisadores."
-        ]
+          "Construção de rotinas de web scraping e ETL para extrair e tratar dados públicos do Google Scholar.",
+          "Automação da coleta e organização de artigos, linhas de pesquisa e informações profissionais de potenciais colaboradores.",
+          "Padronização e entrega dos dados em planilhas Excel para apoiar a prospecção e o recrutamento de pesquisadores pela UniSER/UnB."
+        ],
+        "href": "https://www.uniserunb.com/",
+        "tags": ["Web scraping", "ETL", "Google Scholar", "Excel"]
       }
     ],
     "events_title": "Palestras & Eventos",
     "events": [
       {
+        "id": "campus",
         "role": "Palestrante — Campus Party Brasília",
         "period": "Jul 2025",
-        "text": "Representando a DW Corp, compartilhei experiências e desafios de um projeto web avançado já em produção, com foco em aprendizados práticos e evolução profissional."
+        "text": "Representando a DW Corp, compartilhei experiências e desafios de um projeto web avançado já em produção, com foco em aprendizados práticos e evolução profissional.",
+        "image": "gallery/campus-party-convite.webp",
+        "alternateImage": "gallery/serjao-campus-party.webp"
       },
       {
+        "id": "nexo",
         "role": "Nexo — Hackathon Internacional da MLH",
         "period": "Jan 2026",
         "text": "Projeto premiado entre 117 projetos e 356 participantes. Solução de onboarding e compreensão de grandes repositórios de código, com análise automatizada e explicações contextuais.",
+        "image": "gallery/obrigado-MLH.webp",
         "link": "https://www.youtube.com/watch?v=WJ31fUvhq2c",
-        "linkLabel": "Assistir apresentação"
+        "linkLabel": "Assistir apresentação",
+        "videoId": "WJ31fUvhq2c"
+      },
+      {
+        "id": "ibm-dev-day",
+        "role": "Apresentação — IBM Dev Day: Bob in Action",
+        "period": "Ago 2026",
+        "text": "Apresentação da solução desenvolvida para o hackathon IBM Dev Day: Bob in Action, explorando IA e automação de fluxos de desenvolvimento com IBM Bob.",
+        "image": "https://i.ytimg.com/vi/FbkGr-Mgccw/hqdefault.jpg",
+        "link": "https://www.youtube.com/watch?v=FbkGr-Mgccw",
+        "linkLabel": "Assistir apresentação",
+        "videoId": "FbkGr-Mgccw"
+      },
+      {
+        "id": "pmi-hackathon",
+        "role": "Hackathon PMI-DF 2026 — Risco de Crédito no Agronegócio",
+        "period": "Set 2026",
+        "text": "Em equipe, desenvolvemos a proposta e o Project Canvas de um sistema inteligente para due diligence, análise de risco de crédito e alertas precoces de inadimplência ou recuperação judicial para a Krill Tech. A solução foi defendida em um pitch para a banca do evento.",
+        "image": "gallery/hackathon-pmi-df-2026.webp"
       }
     ],
     "gallery_title": "Galeria de eventos",
@@ -120,7 +192,7 @@
     "more": "mais",
     "repos": "Repositórios públicos",
     "followers": "Seguidores",
-    "stars": "Linguagem principal"
+    "stars": "Linguagem favorita"
   },
   "contact": {
     "label": "Contato",
@@ -139,5 +211,172 @@
     "targeting": "Mirando",
     "rapid": "rápido",
     "blitz": "blitz"
+  },
+  "design": {
+    "portfolio": "Portfólio / 2026",
+    "hello": "Olá, sou",
+    "headline1": "Da ideia ao software.",
+    "headline2": "Com intenção.",
+    "intro": "Desenvolvo produtos de ponta a ponta. Conecto web, sistemas e dados com curiosidade para entender — e cuidado para construir.",
+    "letsTalk": "Vamos conversar",
+    "heroFootnote": "Fullstack na prática. Rust no coração.",
+    "profileBio": "Engenharia de software, boas perguntas e vontade de ir além da superfície.",
+    "profileEducation": "Eng. de Software · UnB",
+    "profileCaption": "O dev por trás do código.",
+    "focusLine": "Web · Sistemas · Dados & IA",
+    "menuNote": "Ideias ganham forma.\nCódigo ganha propósito.",
+    "pageTitle": "Lucas Zanetti — Software & AI & Data Engineer",
+    "metaDescription": "Portfólio de Lucas Andrade Zanetti. Desenvolvimento fullstack, sistemas em Rust, dados e inteligência artificial. Brasília, Brasil.",
+    "projectsTitle": "Código que virou realidade.",
+    "projectsIntro": "De um compilador em Rust a produtos com IA. Uma seleção do que gosto de construir.",
+    "filterLabel": "Filtrar projetos",
+    "selectProject": "Explorar {{name}}",
+    "category_systems": "Sistemas & baixo nível",
+    "category_ai": "Inteligência artificial",
+    "category_web": "Web & ferramentas",
+    "builtWith": "Quem construiu",
+    "moreContributors": "Ver mais {{count}} colaboradores",
+    "viewContributors": "Ver colaboradores",
+    "allRepos": "Todos os repositórios",
+    "pagination": "Páginas de projetos",
+    "previous": "Página anterior",
+    "next": "Próxima página",
+    "page": "Página {{number}}",
+    "aboutTitle1": "Curiosidade como ponto de partida.",
+    "aboutTitle2": "Engenharia como caminho.",
+    "experienceLink": "Conheça minha trajetória",
+    "stackTitle": "Uma boa ideia. As ferramentas certas.",
+    "stackIntro": "Linguagens, infraestrutura e serviços que fazem parte do meu dia a dia.",
+    "pauseLogos": "Pausar carrossel de tecnologias",
+    "resumeLogos": "Continuar carrossel de tecnologias",
+    "experienceTitle": "Aprender fazendo. E compartilhando.",
+    "experienceIntro": "Experiências profissionais, projetos em equipe e conversas fora do editor.",
+    "eventsNote": "O código também conecta pessoas.",
+    "videoTitle": "Nexo — apresentação no MLH Hacktown",
+    "videoLoading": "Carregando apresentação…",
+    "watchYoutube": "Abrir no YouTube",
+    "activityTitle": "Um pouco, todos os dias.",
+    "openGithub": "Ver perfil no GitHub",
+    "lastYear": "Últimos 12 meses",
+    "githubSource": "Dados públicos do GitHub",
+    "chessLink": "Meu perfil no Chess.com",
+    "contactTitle1": "Tem uma ideia?",
+    "contactTitle2": "Vamos construir.",
+    "copyEmail": "Copiar endereço de e-mail",
+    "copied": "E-mail copiado",
+    "copyError": "Não foi possível copiar. Selecione o endereço acima.",
+    "backTop": "Voltar ao topo",
+    "chessStats": "Ver estatísticas de xadrez",
+    "chessError": "Estatísticas indisponíveis no momento.",
+    "chess_rapid": "Estatísticas de xadrez rápido no Chess.com",
+    "chess_bullet": "Estatísticas de xadrez bullet no Chess.com",
+    "nextPhoto": "Ver outra foto da Campus Party",
+    "moreProjects": "Mais projetos para explorar",
+    "pageOf": "Página {{page}} de {{pages}}",
+    "nextCollection": "Próximos projetos",
+    "experienceChapter": "Capítulos da minha trajetória",
+    "experienceDetails": "Contribuições",
+    "experienceSource": "Conheça o projeto",
+    "gardenPause": "Pausar jardim animado",
+    "gardenPlay": "Animar jardim",
+    "gardenCredit": "Ink Garden · Serafim / 21st.dev",
+    "contactNote": "Uma conversa pode ser o começo de algo bom.",
+    "contactSubject": "Sobre o que vamos conversar?",
+    "contactTopics": [
+      "Um novo projeto",
+      "Uma oportunidade",
+      "Uma boa ideia"
+    ],
+    "contactTo": "Para",
+    "contactFrom": "De Brasília, para onde a ideia levar.",
+    "profileMore": "Sobre mim",
+    "profileEmail": "Enviar e-mail"
+  },
+  "ui": {
+    "home": "Página inicial",
+    "loading": "Carregando…",
+    "light": "Usar tema claro",
+    "dark": "Usar tema escuro",
+    "menu": "Menu",
+    "close": "Fechar",
+    "navigation": "Explore",
+    "skip": "Ir para o conteúdo",
+    "retry": "Tentar novamente"
+  },
+  "notFound": {
+    "pageTitle": "404 — Lucas Zanetti",
+    "label": "Erro 404 / Caminho não encontrado",
+    "title": "Esse caminho ainda não existe.",
+    "description": "Talvez o endereço tenha mudado. Os projetos continuam por aqui.",
+    "back": "Voltar ao início"
+  },
+  "lab": {
+    "label": "Laboratório de embarcados",
+    "switch": "Explorar embarcados",
+    "back": "Voltar a software & IA",
+    "portalTitle": "E quando o código ganha movimento?",
+    "portalText": "Visão computacional, robótica e simulação. Um outro lado do que construo.",
+    "loading": "Entrando no laboratório",
+    "returning": "Voltando ao portfólio",
+    "pageTitle": "Lucas Zanetti — Embedded Systems Lab",
+    "eyebrow": "Zanetti / Engenharia além da tela",
+    "headline1": "Código. Matéria.",
+    "headline2": "Movimento.",
+    "intro": "Da percepção à ação. Exploro a conexão entre software e mundo físico — um sensor, um modelo e um experimento por vez.",
+    "projects": "Explorar experimentos",
+    "photoNote": "Robótica / estudo visual",
+    "photoCredit": "Pavel Danilyuk / Pexels",
+    "index": "Registro de experimentos",
+    "projectTitle": "Do sinal à decisão.",
+    "projectIntro": "Dois projetos para investigar percepção, controle e comportamento em hardware e simulação.",
+    "colorDesc": "Visão computacional em C++17 desenvolvida na Raspberry Pi 3 para pequenos robôs: detecção por cor, ROI dinâmica, filtro de Kalman e controle PD.",
+    "colorNote": "Pipeline de percepção e rastreamento com câmera no Linux, executado na Raspberry Pi 3.",
+    "sumoDesc": "Combate de robôs no Gazebo Harmonic com firmware ESP32 emulado em C++. Física derivada do CAD, sensores com ruído, máquina de estados e telemetria com relatório de cada partida.",
+    "sumoNote": "Simulação em software; o repositório requer acesso autorizado.",
+    "privateCode": "Repositório restrito",
+    "illustration": "Visualização conceitual do pipeline",
+    "arena": "Esquema da arena de simulação",
+    "pipeline": [
+      "Capturar",
+      "Perceber",
+      "Decidir",
+      "Atuar"
+    ],
+    "futureTitle": "O próximo horizonte.",
+    "futureText": "Uma bancada em expansão. Novos estudos em robôs, drones e sistemas autônomos vão encontrar seu espaço aqui.",
+    "futureLabel": "Direções de pesquisa",
+    "futureItems": [
+      "Robótica móvel",
+      "Simulação física",
+      "Drones & autonomia"
+    ],
+    "contactTitle": "Vamos tirar uma ideia da tela?",
+    "contactText": "De sistemas embarcados a novas possibilidades de colaboração.",
+    "droneAlt": "Drone sobre fundo escuro — direção de pesquisa em autonomia",
+    "demoVideo": "Simulação em ação",
+    "demoLoading": "Carregando simulação…",
+    "demoVideoError": "Não foi possível reproduzir o vídeo.",
+    "demoOpenVideo": "Abrir vídeo",
+    "demoEvidence": "Da simulação aos resultados",
+    "demoEvidenceNote": "Registros da execução: telemetria e trajetórias. Amplie as imagens para explorar os detalhes.",
+    "demo_telemetry": "Painel de telemetria",
+    "demo_trajectories": "Trajetórias por round",
+    "demoAlt_telemetry": "Captura do painel de telemetria da simulação: round 3, placar, sensores, motores e estado dos robôs.",
+    "demoAlt_trajectories": "Gráfico das trajetórias de Big Chique e do adversário nos rounds 1 a 5. Círculos indicam a largada e cruzes o fim.",
+    "demoCaption_telemetry": "Uma captura do round 3: percepção, controle, bateria e dinâmica dos dois robôs.",
+    "demoCaption_trajectories": "Rounds 1–5 da série de 10 rounds. Verde: Big Chique. Vermelho: adversário. Círculo: largada; cruz: fim.",
+    "demoExpand": "Ampliar {{name}}",
+    "demoZoom": "Ver em tamanho real",
+    "demoFit": "Ajustar à tela",
+    "demoOpenImage": "Abrir imagem",
+    "demoImageRegion": "Imagem ampliada; use a rolagem para explorar",
+    "demoPlay": "Assistir simulação"
+  },
+  "certifications": {
+    "label": "Certificações & aprendizados",
+    "title": "Conhecimento que se renova.",
+    "source": "Certificados no LinkedIn",
+    "credential": "Credencial",
+    "view": "Ver {{name}} no LinkedIn"
   }
 }

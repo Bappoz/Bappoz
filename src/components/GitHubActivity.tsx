@@ -1,135 +1,183 @@
-import { useEffect, useMemo, useState } from "react";
+import { Github } from "./icons/Brands";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { RefreshCw } from "lucide-react";
 import { Reveal, SectionLabel } from "./Reveal";
-
-const USER = "Bappoz";
-
+import { ExternalLink, GooeyLoader, Tooltip } from "./Ui";
+import { fetchJson } from "../lib/utils";
 interface Day {
   date: string;
   count: number;
   level: 0 | 1 | 2 | 3 | 4;
 }
-
-interface Stats {
-  repos?: number;
-  followers?: number;
+interface Result {
+  contributions: Day[];
+  total: Record<string, number>;
 }
-
 export default function GitHubActivity() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [days, setDays] = useState<Day[] | null>(null);
-  const [total, setTotal] = useState<number>(0);
-  const [stats, setStats] = useState<Stats>({});
+  const [stats, setStats] = useState<{
+    public_repos: number;
+    followers: number;
+  } | null>(null);
   const [error, setError] = useState(false);
-
+  const [retry, setRetry] = useState(0);
+  const [visible, setVisible] = useState(false);
+  const section = useRef<HTMLElement>(null);
   useEffect(() => {
-    let alive = true;
-    fetch(`https://github-contributions-api.jogruber.de/v4/${USER}?y=last`)
-      .then((r) => (r.ok ? r.json() : Promise.reject()))
-      .then((data) => {
-        if (!alive) return;
-        setDays(data.contributions as Day[]);
-        setTotal(data.total?.lastYear ?? Object.values<number>(data.total ?? {})[0] ?? 0);
-      })
-      .catch(() => alive && setError(true));
-
-    fetch(`https://api.github.com/users/${USER}`)
-      .then((r) => (r.ok ? r.json() : Promise.reject()))
-      .then((u) => alive && setStats({ repos: u.public_repos, followers: u.followers }))
-      .catch(() => {});
-
-    return () => {
-      alive = false;
-    };
+    const observer = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" },
+    );
+    if (section.current) observer.observe(section.current);
+    return () => observer.disconnect();
   }, []);
-
+  useEffect(() => {
+    if (!visible) return;
+    const controller = new AbortController();
+    setError(false);
+    fetchJson<Result>(
+      "https://github-contributions-api.jogruber.de/v4/Bappoz?y=last",
+      controller.signal,
+    )
+      .then((data) => {
+        if (!Array.isArray(data.contributions))
+          throw new Error("Invalid response");
+        setDays(
+          data.contributions
+            .filter(
+              (d) =>
+                /^\d{4}-\d{2}-\d{2}$/.test(d.date) && Number.isFinite(d.count),
+            )
+            .sort((a, b) => a.date.localeCompare(b.date)),
+        );
+      })
+      .catch(() => {
+        if (!controller.signal.aborted) setError(true);
+      });
+    fetchJson<{ public_repos: number; followers: number }>(
+      "https://api.github.com/users/Bappoz",
+      controller.signal,
+    )
+      .then(setStats)
+      .catch(() => {});
+    return () => controller.abort();
+  }, [visible, retry]);
   const weeks = useMemo(() => {
-    if (!days) return [];
-    const out: (Day | null)[][] = [];
-    let col: (Day | null)[] = [];
-    days.forEach((d, i) => {
-      const wd = new Date(d.date + "T00:00:00Z").getUTCDay();
-      if (i === 0 && wd !== 0) for (let k = 0; k < wd; k++) col.push(null);
-      col.push(d);
-      if (wd === 6) {
-        out.push(col);
-        col = [];
-      }
-    });
-    if (col.length) out.push(col);
-    return out;
+    if (!days?.length) return [];
+    const cells: (Day | null)[] = Array(
+      new Date(days[0].date + "T00:00:00Z").getUTCDay(),
+    ).fill(null);
+    cells.push(...days);
+    return Array.from({ length: Math.ceil(cells.length / 7) }, (_, i) =>
+      cells.slice(i * 7, i * 7 + 7),
+    );
   }, [days]);
-
+  const total = days?.reduce((n, d) => n + d.count, 0);
   return (
-    <section className="section activity" id="activity">
-      <SectionLabel>{t("activity.label")}</SectionLabel>
-      <Reveal as="h2" className="section-title">
-        {t("activity.title")}
-      </Reveal>
-      <Reveal className="section-sub" delay={0.05}>
-        {t("activity.subtitle")}
-      </Reveal>
-
-      <Reveal className="activity__panel" delay={0.1}>
+    <section
+      id="activity"
+      className="activity section-shell section-space"
+      ref={section}
+    >
+      <SectionLabel number="05">{t("activity.label")}</SectionLabel>
+      <div className="section-heading">
+        <Reveal as="h2">{t("design.activityTitle")}</Reveal>
+        <ExternalLink href="https://github.com/Bappoz">
+          <Github size={17} />
+          @Bappoz
+        </ExternalLink>
+      </div>
+      <div className="activity-panel border-detail">
         {error ? (
-          <p className="activity__error mono">
-            {t("activity.error")}{" "}
-            <a href={`https://github.com/${USER}`} target="_blank" rel="noreferrer">
-              github.com/{USER}
-            </a>
-          </p>
+          <div className="activity-error">
+            <p>{t("activity.error")}</p>
+            <button
+              className="button button-outline"
+              onClick={() => setRetry((n) => n + 1)}
+            >
+              <RefreshCw size={16} />
+              {t("ui.retry")}
+            </button>
+            <ExternalLink href="https://github.com/Bappoz">
+              {t("design.openGithub")}
+            </ExternalLink>
+          </div>
         ) : !days ? (
-          <p className="activity__loading mono">{t("activity.loading")}</p>
+          <GooeyLoader label={t("activity.loading")} />
         ) : (
           <>
-            <div className="activity__heat">
+            <div className="activity-top">
+              <span>
+                <strong>{total?.toLocaleString(i18n.language)}</strong>{" "}
+                {t("activity.contributions")}
+              </span>
+              <span>{t("design.lastYear")}</span>
+            </div>
+            <div
+              className="heat-scroll"
+              tabIndex={0}
+              role="region"
+              aria-label={t("activity.label")}
+            >
               <div className="heat">
-                {weeks.map((w, wi) => (
-                  <div className="heat__col" key={wi}>
-                    {Array.from({ length: 7 }).map((_, di) => {
-                      const cell = w[di];
-                      return (
+                {weeks.map((week, i) => (
+                  <div className="heat-column" key={i}>
+                    {week.map((d, j) => (
+                      <Tooltip
+                        key={j}
+                        text={
+                          d
+                            ? `${d.count} · ${new Date(d.date + "T12:00:00Z").toLocaleDateString(i18n.language)}`
+                            : ""
+                        }
+                      >
                         <span
-                          key={di}
-                          className="heat__cell"
-                          data-level={cell ? cell.level : "empty"}
-                          title={cell ? `${cell.count} · ${cell.date}` : ""}
+                          className="heat-cell"
+                          data-level={d ? d.level : "empty"}
+                          aria-label={d ? `${d.date}: ${d.count}` : undefined}
                         />
-                      );
-                    })}
+                      </Tooltip>
+                    ))}
                   </div>
                 ))}
               </div>
             </div>
-            <div className="activity__legend mono">
-              <span>{t("activity.less")}</span>
-              {[0, 1, 2, 3, 4].map((l) => (
-                <span key={l} className="heat__cell" data-level={l} />
-              ))}
-              <span>{t("activity.more")}</span>
+            <div className="heat-footer">
+              <span>{t("design.githubSource")}</span>
+              <div>
+                <span>{t("activity.less")}</span>
+                {[0, 1, 2, 3, 4].map((n) => (
+                  <i key={n} className="heat-cell" data-level={n} />
+                ))}
+                <span>{t("activity.more")}</span>
+              </div>
             </div>
           </>
         )}
-      </Reveal>
-
-      <div className="activity__stats">
-        <Reveal className="stat-tile" delay={0.05}>
-          <span className="stat-tile__num">{total ? total.toLocaleString() : "—"}</span>
-          <span className="stat-tile__label mono">{t("activity.contributions")}</span>
-        </Reveal>
-        <Reveal className="stat-tile" delay={0.12}>
-          <span className="stat-tile__num">{stats.repos ?? "44+"}</span>
-          <span className="stat-tile__label mono">{t("activity.repos")}</span>
-        </Reveal>
-        <Reveal className="stat-tile" delay={0.19}>
-          <span className="stat-tile__num">{stats.followers ?? "—"}</span>
-          <span className="stat-tile__label mono">{t("activity.followers")}</span>
-        </Reveal>
-        <Reveal className="stat-tile" delay={0.26}>
-          <span className="stat-tile__num stat-tile__num--rust">Rust</span>
-          <span className="stat-tile__label mono">{t("activity.stars")}</span>
-        </Reveal>
       </div>
+      {stats && (
+        <div className="github-stats">
+          <span>
+            <strong>{stats.public_repos}</strong>
+            {t("activity.repos")}
+          </span>
+          <span>
+            <strong>{stats.followers}</strong>
+            {t("activity.followers")}
+          </span>
+          <span>
+            <strong>Rust</strong>
+            {t("activity.stars")}
+          </span>
+        </div>
+      )}
     </section>
   );
 }

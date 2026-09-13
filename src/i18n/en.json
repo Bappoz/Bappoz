@@ -9,7 +9,7 @@
     "resume": "Resume"
   },
   "hero": {
-    "role": "Software & Data Engineer",
+    "role": "Software & AI & Data Engineer",
     "location": "Brasília, Brazil",
     "headline_1": "I build products",
     "headline_accent": "end to end",
@@ -20,9 +20,18 @@
     "scroll": "scroll to explore",
     "available": "Available for new projects",
     "stats": [
-      { "v": "+40", "l": "Public repositories" },
-      { "v": "08", "l": "Languages" },
-      { "v": "6th", "l": "Semester · Software Eng. UnB" }
+      {
+        "v": "+40",
+        "l": "Public repositories"
+      },
+      {
+        "v": "08",
+        "l": "Languages"
+      },
+      {
+        "v": "6th",
+        "l": "Semester · Software Eng. UnB"
+      }
     ],
     "card_systems": "Low-level systems · Rust",
     "card_ai": "AI · Fullstack · Data"
@@ -58,39 +67,102 @@
     "present": "Present",
     "jobs": [
       {
+        "role": "Software Requirements Teaching Assistant",
+        "company": "University of Brasília",
+        "period": "Aug 2026 — Present",
+        "intro": "Current volunteer teaching assistantship in Software Requirements Engineering, supporting learning and hands-on practice of the field's foundations.",
+        "points": [
+          "Supported students in understanding and applying requirements elicitation, analysis, specification, validation and management.",
+          "Answered questions and followed course content, providing guidance through exercises and class discussions.",
+          "Maintained an ongoing exchange on the nature of requirements engineering and the decisions that make a product clearer and viable."
+        ],
+        "tags": [
+          "Volunteer teaching assistant",
+          "Requirements Engineering",
+          "Education"
+        ]
+      },
+      {
+        "company": "CrianexHub",
+        "role": "Project Manager & Chief Manager",
+        "period": "2026 · UnB",
+        "intro": "A centralized administration platform and bilingual digital storefront for the Crianex software house.",
+        "points": [
+          "Project leadership and team organization, connecting planning to feature-based delivery.",
+          "Documentation of team–client interaction and ceremony cadence, with traceable responsibilities.",
+          "FDD + Kanban: roadmap and modeling in Miro; issues, WIP limits and reviews in GitHub Projects.",
+          "Asynchronous coordination in Discord and partial and formal client validation each iteration."
+        ],
+        "href": "https://github.com/Bappoz/CrianexHub",
+        "tags": [
+          "FDD + Kanban",
+          "Miro",
+          "GitHub Projects"
+        ]
+      },
+      {
         "role": "Software Engineer",
         "company": "DW Corp",
         "period": "Apr 2025 — Present",
+        "intro": "A Brazilian technology consultancy that builds custom software, integrations and digital solutions for companies looking to scale efficiently.",
         "points": [
-          "Developed and deployed applications, ensuring high-quality code and functionality.",
-          "Collaborated with the team to design and implement innovative solutions using agile methodologies.",
-          "Continuous learning and improvement in software engineering principles."
-        ]
+          "Developed and deployed applications and integrations, following deliveries from initial design through production.",
+          "Worked with the team to analyze needs, design solutions and evolve features through agile methods.",
+          "Maintained a continuous focus on code quality, reliability and maintainability for high-value products."
+        ],
+        "href": "https://dwcorp.com.br/en/terms",
+        "tags": ["Custom software", "Integrations", "Agile methods"]
       },
       {
         "role": "Data Engineer",
         "company": "UniSer",
         "period": "Jul 2025 — Dec 2025",
+        "intro": "A University of Brasília outreach program focused on education, citizenship and quality of life for mature and older adults.",
         "points": [
-          "Web scraping and ETL to extract data from Google Scholar, applied to the University of Aging.",
-          "Automated collection and organization of academic information (papers, research and professional data).",
-          "Converted data into standardized Excel tables to support researcher recruitment."
-        ]
+          "Built web-scraping and ETL routines to extract and process public Google Scholar data.",
+          "Automated the collection and organization of papers, research interests and professional information from prospective collaborators.",
+          "Standardized and delivered the data in Excel workbooks to support researcher outreach and recruitment at UniSER/UnB."
+        ],
+        "href": "https://www.uniserunb.com/",
+        "tags": ["Web scraping", "ETL", "Google Scholar", "Excel"]
       }
     ],
     "events_title": "Talks & Events",
     "events": [
       {
+        "id": "campus",
         "role": "Speaker — Campus Party Brasília",
         "period": "Jul 2025",
-        "text": "Representing DW Corp, I shared experiences and challenges from an advanced web project already in production, focused on practical learnings and professional growth."
+        "text": "Representing DW Corp, I shared experiences and challenges from an advanced web project already in production, focused on practical learnings and professional growth.",
+        "image": "gallery/campus-party-convite.webp",
+        "alternateImage": "gallery/serjao-campus-party.webp"
       },
       {
+        "id": "nexo",
         "role": "Nexo — MLH International Hackathon",
         "period": "Jan 2026",
         "text": "Award-winning project among 117 projects and 356 participants. A solution for onboarding and understanding large code repositories, with automated analysis and contextual explanations.",
+        "image": "gallery/obrigado-MLH.webp",
         "link": "https://www.youtube.com/watch?v=WJ31fUvhq2c",
-        "linkLabel": "Watch the presentation"
+        "linkLabel": "Watch the presentation",
+        "videoId": "WJ31fUvhq2c"
+      },
+      {
+        "id": "ibm-dev-day",
+        "role": "Presentation — IBM Dev Day: Bob in Action",
+        "period": "Aug 2026",
+        "text": "Presentation of the solution built for the IBM Dev Day: Bob in Action hackathon, exploring AI and development-workflow automation with IBM Bob.",
+        "image": "https://i.ytimg.com/vi/FbkGr-Mgccw/hqdefault.jpg",
+        "link": "https://www.youtube.com/watch?v=FbkGr-Mgccw",
+        "linkLabel": "Watch the presentation",
+        "videoId": "FbkGr-Mgccw"
+      },
+      {
+        "id": "pmi-hackathon",
+        "role": "PMI-DF Hackathon 2026 — Agribusiness Credit Risk",
+        "period": "Sep 2026",
+        "text": "As a team, we developed the proposal and Project Canvas for an intelligent system supporting due diligence, credit-risk analysis and early warnings for delinquency or judicial reorganization at Krill Tech. We defended the solution in a pitch to the event jury.",
+        "image": "gallery/hackathon-pmi-df-2026.webp"
       }
     ],
     "gallery_title": "Event gallery",
@@ -120,7 +192,7 @@
     "more": "more",
     "repos": "Public repositories",
     "followers": "Followers",
-    "stars": "Primary language"
+    "stars": "Favorite language"
   },
   "contact": {
     "label": "Contact",
@@ -139,5 +211,172 @@
     "targeting": "Targeting",
     "rapid": "rapid",
     "blitz": "blitz"
+  },
+  "design": {
+    "portfolio": "Portfolio / 2026",
+    "hello": "Hi, I’m",
+    "headline1": "From idea to software.",
+    "headline2": "With intention.",
+    "intro": "I build products end to end. Bringing web, systems and data together with the curiosity to understand — and the care to build.",
+    "letsTalk": "Let’s talk",
+    "heroFootnote": "Fullstack in practice. Rust at heart.",
+    "profileBio": "Software engineering, good questions and a drive to go beneath the surface.",
+    "profileEducation": "Software Engineering · UnB",
+    "profileCaption": "The person behind the code.",
+    "focusLine": "Web · Systems · Data & AI",
+    "menuNote": "Ideas take shape.\nCode finds purpose.",
+    "pageTitle": "Lucas Zanetti — Software & AI & Data Engineer",
+    "metaDescription": "Lucas Andrade Zanetti’s portfolio. Fullstack development, Rust systems, data and artificial intelligence. Brasília, Brazil.",
+    "projectsTitle": "Code that became reality.",
+    "projectsIntro": "From a Rust compiler to AI products. A selection of things I enjoy building.",
+    "filterLabel": "Filter projects",
+    "selectProject": "Explore {{name}}",
+    "category_systems": "Systems & low-level",
+    "category_ai": "Artificial intelligence",
+    "category_web": "Web & tools",
+    "builtWith": "Built by",
+    "moreContributors": "Show {{count}} more contributors",
+    "viewContributors": "View contributors",
+    "allRepos": "All repositories",
+    "pagination": "Project pages",
+    "previous": "Previous page",
+    "next": "Next page",
+    "page": "Page {{number}}",
+    "aboutTitle1": "Curiosity is the starting point.",
+    "aboutTitle2": "Engineering is the way forward.",
+    "experienceLink": "Explore my journey",
+    "stackTitle": "A good idea. The right tools.",
+    "stackIntro": "Languages, infrastructure and services that are part of my everyday work.",
+    "pauseLogos": "Pause technology carousel",
+    "resumeLogos": "Resume technology carousel",
+    "experienceTitle": "Learning by doing. And sharing.",
+    "experienceIntro": "Professional experience, team projects and conversations beyond the editor.",
+    "eventsNote": "Code connects people, too.",
+    "videoTitle": "Nexo — MLH Hacktown presentation",
+    "videoLoading": "Loading presentation…",
+    "watchYoutube": "Open on YouTube",
+    "activityTitle": "A little, every day.",
+    "openGithub": "View GitHub profile",
+    "lastYear": "Last 12 months",
+    "githubSource": "Public data from GitHub",
+    "chessLink": "My Chess.com profile",
+    "contactTitle1": "Have an idea?",
+    "contactTitle2": "Let’s build it.",
+    "copyEmail": "Copy email address",
+    "copied": "Email copied",
+    "copyError": "Could not copy. Select the address above.",
+    "backTop": "Back to top",
+    "chessStats": "View chess stats",
+    "chessError": "Stats are currently unavailable.",
+    "chess_rapid": "Chess.com rapid statistics",
+    "chess_bullet": "Chess.com bullet statistics",
+    "nextPhoto": "View another Campus Party photo",
+    "moreProjects": "More projects to explore",
+    "pageOf": "Page {{page}} of {{pages}}",
+    "nextCollection": "Next projects",
+    "experienceChapter": "Chapters of my journey",
+    "experienceDetails": "Contributions",
+    "experienceSource": "Explore the project",
+    "gardenPause": "Pause animated garden",
+    "gardenPlay": "Play animated garden",
+    "gardenCredit": "Ink Garden · Serafim / 21st.dev",
+    "contactNote": "A conversation can be the start of something good.",
+    "contactSubject": "What shall we talk about?",
+    "contactTopics": [
+      "A new project",
+      "An opportunity",
+      "A good idea"
+    ],
+    "contactTo": "To",
+    "contactFrom": "From Brasília, wherever the idea takes us.",
+    "profileMore": "About me",
+    "profileEmail": "Send email"
+  },
+  "ui": {
+    "home": "Home",
+    "loading": "Loading…",
+    "light": "Use light theme",
+    "dark": "Use dark theme",
+    "menu": "Menu",
+    "close": "Close",
+    "navigation": "Explore",
+    "skip": "Skip to content",
+    "retry": "Try again"
+  },
+  "notFound": {
+    "pageTitle": "404 — Lucas Zanetti",
+    "label": "Error 404 / Page not found",
+    "title": "This path doesn’t exist yet.",
+    "description": "The address may have changed. The projects are still here.",
+    "back": "Back to home"
+  },
+  "lab": {
+    "label": "Embedded systems lab",
+    "switch": "Explore embedded systems",
+    "back": "Back to software & AI",
+    "portalTitle": "What happens when code starts moving?",
+    "portalText": "Computer vision, robotics and simulation. Another side of what I build.",
+    "loading": "Entering the lab",
+    "returning": "Returning to the portfolio",
+    "pageTitle": "Lucas Zanetti — Embedded Systems Lab",
+    "eyebrow": "Zanetti / Engineering beyond the screen",
+    "headline1": "Code. Matter.",
+    "headline2": "Motion.",
+    "intro": "From perception to action. Exploring the connection between software and the physical world — one sensor, one model and one experiment at a time.",
+    "projects": "Explore experiments",
+    "photoNote": "Robotics / visual study",
+    "photoCredit": "Pavel Danilyuk / Pexels",
+    "index": "Experiment log",
+    "projectTitle": "From signal to decision.",
+    "projectIntro": "Two projects exploring perception, control and behavior in hardware and simulation.",
+    "colorDesc": "C++17 computer vision developed on Raspberry Pi 3 for small robots: color detection, dynamic ROI, Kalman filtering and PD control.",
+    "colorNote": "A Linux camera perception and tracking pipeline running on Raspberry Pi 3.",
+    "sumoDesc": "Robot combat in Gazebo Harmonic with C++ emulated ESP32 firmware. CAD-derived physics, noisy sensors, a state machine and telemetry with a report for every match.",
+    "sumoNote": "Software simulation; the repository requires authorized access.",
+    "privateCode": "Restricted repository",
+    "illustration": "Conceptual pipeline visualization",
+    "arena": "Simulation arena schematic",
+    "pipeline": [
+      "Capture",
+      "Perceive",
+      "Decide",
+      "Act"
+    ],
+    "futureTitle": "The next horizon.",
+    "futureText": "An expanding workbench. New studies in robots, drones and autonomous systems will find their place here.",
+    "futureLabel": "Research directions",
+    "futureItems": [
+      "Mobile robotics",
+      "Physics simulation",
+      "Drones & autonomy"
+    ],
+    "contactTitle": "Let’s take an idea beyond the screen?",
+    "contactText": "From embedded systems to new possibilities for collaboration.",
+    "droneAlt": "Drone against a dark background — autonomous systems research direction",
+    "demoVideo": "Simulation in action",
+    "demoLoading": "Loading simulation…",
+    "demoVideoError": "The video could not be played.",
+    "demoOpenVideo": "Open video",
+    "demoEvidence": "From simulation to results",
+    "demoEvidenceNote": "Recorded telemetry and trajectories. Enlarge the images to explore the details.",
+    "demo_telemetry": "Telemetry dashboard",
+    "demo_trajectories": "Trajectories by round",
+    "demoAlt_telemetry": "Recorded simulation telemetry: round 3, score, sensors, motors and robot state.",
+    "demoAlt_trajectories": "Big Chique and opponent trajectories for rounds 1–5. Circles mark starting positions and crosses mark ending positions.",
+    "demoCaption_telemetry": "A snapshot of round 3: perception, control, battery and dynamics for both robots.",
+    "demoCaption_trajectories": "Rounds 1–5 from the 10-round series. Green: Big Chique. Red: opponent. Circle: start; cross: finish.",
+    "demoExpand": "Enlarge {{name}}",
+    "demoZoom": "View at actual size",
+    "demoFit": "Fit to screen",
+    "demoOpenImage": "Open image",
+    "demoImageRegion": "Enlarged image; scroll to explore",
+    "demoPlay": "Play simulation"
+  },
+  "certifications": {
+    "label": "Certifications & learning",
+    "title": "Always something new to learn.",
+    "source": "Certificates on LinkedIn",
+    "credential": "Credential",
+    "view": "View {{name}} on LinkedIn"
   }
 }

@@ -1,156 +1,111 @@
-import { useRef } from "react";
-import { motion } from "framer-motion";
+import { Github, Linkedin } from "./icons/Brands";
+import {
+  ArrowDown,
+  ArrowDownRight,
+  ArrowUpRight,
+  MapPin,
+  Code2,
+  Mail,
+} from "lucide-react";
 import { useTranslation } from "react-i18next";
-import FerrisCrab from "./FerrisCrab";
-import { BrandIcon, ArrowIcon } from "./icons/Icons";
-import { socials } from "../data/socials";
-
-const ease = [0.22, 1, 0.36, 1] as const;
-
-function Words({ text, delay = 0, ready }: { text: string; delay?: number; ready: boolean }) {
-  return (
-    <>
-      {text.split(" ").map((w, i) => (
-        <span className="word-mask" key={i}>
-          <motion.span
-            className="word"
-            initial={{ y: "110%" }}
-            animate={ready ? { y: 0 } : { y: "110%" }}
-            transition={{ duration: 0.9, ease, delay: delay + i * 0.06 }}
-          >
-            {w}
-          </motion.span>
-        </span>
-      ))}
-    </>
-  );
-}
-
-interface Stat {
-  v: string;
-  l: string;
-}
-
-export default function Hero({ ready }: { ready: boolean }) {
+import { Reveal } from "./Reveal";
+import GlassCard from "./ui/glass-card";
+import { asset } from "../lib/utils";
+export default function Hero() {
   const { t } = useTranslation();
-  const cardRef = useRef<HTMLDivElement>(null);
-  const stats = t("hero.stats", { returnObjects: true }) as Stat[];
-
-  const onMove = (e: React.MouseEvent) => {
-    const el = cardRef.current;
-    if (!el || window.matchMedia("(hover: none)").matches) return;
-    const r = el.getBoundingClientRect();
-    const px = (e.clientX - r.left - r.width / 2) / r.width;
-    const py = (e.clientY - r.top - r.height / 2) / r.height;
-    el.style.setProperty("--px", px.toFixed(3));
-    el.style.setProperty("--py", py.toFixed(3));
-  };
-  const onLeave = () => {
-    cardRef.current?.style.setProperty("--px", "0");
-    cardRef.current?.style.setProperty("--py", "0");
-  };
-
-  const fade = (delay: number) => ({
-    initial: { opacity: 0, y: 18 },
-    animate: ready ? { opacity: 1, y: 0 } : { opacity: 0, y: 18 },
-    transition: { duration: 0.7, ease, delay },
-  });
-
   return (
-    <section className="hero" id="top" onMouseMove={onMove} onMouseLeave={onLeave}>
-      <div className="hero__layout">
-        <div className="hero__main">
-          <motion.p className="hero__eyebrow" {...fade(0.1)}>
-            <span className="hero__eyebrow-dot" />
-            {t("hero.role")}
-          </motion.p>
-
-          <h1 className="hero__title">
-            <span className="hero__line">
-              <Words text={t("hero.headline_1")} delay={0.15} ready={ready} />
-            </span>
-            <span className="hero__line hero__line--ghost">
-              <Words text={t("hero.headline_accent")} delay={0.3} ready={ready} />
-            </span>
-            <span className="hero__line">
-              <Words text={t("hero.headline_2")} delay={0.5} ready={ready} />
-            </span>
-          </h1>
-
-          <motion.p className="hero__tagline" {...fade(0.75)}>
-            {t("hero.tagline")}
-          </motion.p>
-
-          <motion.div className="hero__stats" {...fade(0.9)}>
-            {stats.map((s, i) => (
-              <div className="hero__stat" key={i}>
-                <span className="hero__stat-v">{s.v}</span>
-                <span className="hero__stat-l">{s.l}</span>
-              </div>
-            ))}
-          </motion.div>
-
-        </div>
-
-        <motion.aside
-          className="hero__card"
-          ref={cardRef}
-          initial={{ opacity: 0, y: 24 }}
-          animate={ready ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
-          transition={{ duration: 0.9, ease, delay: 0.4 }}
-        >
-          <span className="hero__card-ring" aria-hidden="true" />
-          <div className="hero__photo">
-            <img
-              src="https://bappoz.github.io/Bappoz/lucas-cutout.png"
-              alt="Lucas Andrade Zanetti"
-              width={420}
-              height={420}
-            />
-          </div>
-
-          <h2 className="hero__name">Lucas Andrade Zanetti</h2>
-          <div className="hero__ferris-badge" title="Rust enthusiast">
-            <FerrisCrab size={78} />
-          </div>
-          <p className="hero__card-role">{t("hero.location")}</p>
-
-          <div className="hero__card-socials">
-            {socials.map((s) => (
-              <a
-                key={s.key}
-                href={s.href}
-                target={s.key === "email" ? undefined : "_blank"}
-                rel="noreferrer"
-                aria-label={s.label}
-                data-cursor
-              >
-                <BrandIcon name={s.key} size={18} />
-              </a>
-            ))}
-          </div>
-
-          <div className="hero__card-cta">
-            <a href="#projects" className="btn btn--primary" data-magnetic>
-              {t("hero.cta_projects")}
-              <ArrowIcon />
-            </a>
-            <a href="#contact" className="btn btn--ghost" data-magnetic>
-              {t("hero.cta_contact")}
-            </a>
-          </div>
-        </motion.aside>
+    <section id="home" className="hero section-shell">
+      <div className="hero-topline">
+        <span className="eyebrow">{t("hero.role")}</span>
       </div>
-
-      <motion.div
-        className="hero__scroll"
-        initial={{ opacity: 0 }}
-        animate={ready ? { opacity: 1 } : { opacity: 0 }}
-        transition={{ duration: 0.6, delay: 1.3 }}
-      >
-        <span className="mono">{t("hero.scroll")}</span>
-        <span className="hero__scroll-line" />
-      </motion.div>
+      <div className="hero-layout">
+        <div className="hero-copy">
+          <Reveal>
+            <p className="hero-name">
+              {t("design.hello")} Lucas Andrade Zanetti
+            </p>
+            <h1>
+              {t("design.headline1")}
+              <br />
+              <span>{t("design.headline2")}</span>
+              <ArrowDownRight
+                className="hero-arrow"
+                strokeWidth={1}
+                aria-hidden="true"
+              />
+            </h1>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="hero-description">{t("design.intro")}</p>
+            <div className="hero-buttons">
+              <a className="button button-primary" href="#projects">
+                {t("hero.cta_projects")}
+                <ArrowDown size={17} />
+              </a>
+              <a className="button button-quiet" href="#contact">
+                {t("design.letsTalk")}
+                <ArrowUpRight size={17} />
+              </a>
+            </div>
+          </Reveal>
+          <Reveal delay={0.15} className="hero-footnote">
+            <Code2 size={16} />
+            <span>{t("design.heroFootnote")}</span>
+          </Reveal>
+        </div>
+        <Reveal className="profile-wrap" delay={0.12}>
+          <article className="profile-card border-detail">
+            <div className="profile-image">
+              <img
+                src={asset("portraits/lucas.webp")}
+                width={720}
+                height={720}
+                alt="Lucas Andrade Zanetti"
+              />
+              <span className="profile-image-tag">
+                <MapPin size={13} />
+                {t("hero.location")}
+              </span>
+            </div>
+            <GlassCard
+              className="profile-glass-card"
+              profileName="Lucas Zanetti"
+              handle="@bappoz"
+              description={t("design.profileBio")}
+              education={t("design.profileEducation")}
+              logoSrc={asset("brand/zanetti.webp")}
+              moreLabel={t("design.profileMore")}
+              moreHref="#about"
+              links={[
+                {
+                  label: "GitHub",
+                  href: "https://github.com/Bappoz",
+                  icon: <Github size={17} />,
+                },
+                {
+                  label: "LinkedIn",
+                  href: "https://www.linkedin.com/in/lucas-andrade-zanetti/",
+                  icon: <Linkedin size={17} />,
+                },
+                {
+                  label: t("design.profileEmail"),
+                  href: "mailto:landradezanetti@gmail.com",
+                  icon: <Mail size={17} />,
+                },
+              ]}
+            />
+          </article>
+          <span className="profile-caption">{t("design.profileCaption")}</span>
+        </Reveal>
+      </div>
+      <div className="hero-bottom">
+        <a href="#projects">
+          <ArrowDown size={15} />
+          {t("hero.scroll")}
+        </a>
+        <span>{t("design.focusLine")}</span>
+        <span>01 — 06</span>
+      </div>
     </section>
   );
 }
