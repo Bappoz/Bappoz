@@ -513,7 +513,7 @@
   position: absolute;
   right: 20px;
   top: 20px;
-  background: url("./../public/brand/zanetti.webp") center/30px auto no-repeat;
+  background: url("./../brand/zanetti.webp") center/30px auto no-repeat;
 }
 .contact-letter > p {
   font-size: calc(21px + 2px);

@@ -42,7 +42,7 @@ export const projects: Project[] = [
   },
   {
     name: "Farol",
-    visual: { src: "projects/farol-logo.webp", kind: "farol-logo" },
+    visual: { src: "projects/farol-logo.png", kind: "farol-logo" },
     descPt:
       "Central de carreira local-first: coleta vagas remotas em seis portais, pontua cada uma contra o perfil do usuário, acompanha o pipeline de candidaturas, gera currículos direcionados em PDF e calcula o roadmap de estudos. Servidor em 127.0.0.1, dados em SQLite, nada sai da máquina.",
     descEn:
@@ -108,7 +108,7 @@ export const projects: Project[] = [
   },
   {
     name: "Colibri",
-    visual: { src: "projects/colibri.webp", kind: "brand-logo" },
+    visual: { src: "projects/colibri.png", kind: "brand-logo" },
     descPt:
       "Engine 2D/3D em Rust construída do zero: renderização de software, rasterização paralela, matemática 3D própria e entidades geracionais. Evolui por etapas testáveis em direção a uma arquitetura ECS.",
     descEn:

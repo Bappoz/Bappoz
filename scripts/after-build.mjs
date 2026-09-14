@@ -14,6 +14,6 @@ const home = await readFile(
 const lab = home
   .replaceAll("Software & AI & Data Engineer", "Embedded Systems Lab")
   .replaceAll("Software &amp; AI &amp; Data Engineer", "Embedded Systems Lab")
-  .replaceAll("portraits/lucas.jpeg", "lab/robot-arm.webp")
+  .replaceAll("portraits/lucas.png", "lab/robot-arm.webp")
   .replace('content="#e4d7b0"', 'content="#151918"');
 await writeFile(new URL("../dist/lab/index.html", import.meta.url), lab);
