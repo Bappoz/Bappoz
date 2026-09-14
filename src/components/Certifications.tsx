@@ -48,18 +48,12 @@ export default function Certifications() {
                   aria-label={t("certifications.view", { name })}
                 >
                   <div className="certificate-seal">
-                    {cert.logo ? (
-                      <img
-                        src={asset(`logos/${cert.logo}.webp`)}
-                        alt={cert.issuer}
-                        width={42}
-                        height={42}
-                      />
-                    ) : (
-                      <span className="certificate-mark" aria-hidden="true">
-                        {cert.mark}
-                      </span>
-                    )}
+                    <img
+                      src={asset(`logos/${cert.logo}.webp`)}
+                      alt={cert.issuer}
+                      width={42}
+                      height={42}
+                    />
                   </div>
                   <span className="certificate-issuer">{cert.issuer}</span>
                   <strong>{name}</strong>

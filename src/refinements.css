@@ -1436,13 +1436,6 @@
   object-fit: contain;
   border-radius: 3px;
 }
-.certificate-mark {
-  color: #4f3598;
-  font-family: var(--title-font);
-  font-size: 1rem;
-  font-weight: 800;
-  letter-spacing: -0.06em;
-}
 .certificate-issuer {
   font-size: calc(10px + 2px);
   letter-spacing: 0.05em;
