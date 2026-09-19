@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 
 // Deployed to https://bappoz.github.io/ (user pages repo) -> base "/"
 export default defineConfig({
-  base: "/Bappoz/",
+  base: "/",
   plugins: [react()],
   build: {
     outDir: "dist",
