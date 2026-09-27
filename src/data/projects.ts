@@ -22,6 +22,11 @@ export interface Project {
   };
   coverTitle?: string;
   award?: string;
+  repositories?: {
+    labelPt: string;
+    labelEn: string;
+    href: string;
+  }[];
 }
 
 // Curated — prioritizing well-built, technically deep projects.
@@ -54,17 +59,29 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    name: "bpmn-flow",
+    name: "bpmn-flow + ebb",
     visual: { src: "projects/bpmn-preview.webp", kind: "screenshot" },
     descPt:
-      "Biblioteca modular que transforma diagramas BPMN 2.0 em automação de processos: parser para modelo normalizado, motor de execução por tokens (gateways, eventos de borda, subprocessos, terminate) e viewer interativo. Monorepo com core, viewer, server, CLI e playground.",
+      "Ecossistema BPMN 2.0 nativo em TypeScript. O bpmn-flow fornece parser, validação, viewer e um motor determinístico por tokens; o ebb leva esse núcleo à orquestração durável, com journal reproduzível, replay e bifurcação de instâncias, persistência em SQLite, CLI, console web e workers externos com retries e incidentes.",
     descEn:
-      "Modular library that turns BPMN 2.0 diagrams into process automation: parser to a normalized model, token-based execution engine (gateways, boundary events, subprocesses, terminate) and an interactive viewer. Monorepo with core, viewer, server, CLI and playground.",
-    tags: ["TypeScript", "Monorepo", "Workflow Engine"],
+      "A TypeScript-native BPMN 2.0 ecosystem. bpmn-flow provides the parser, validation, viewer and deterministic token engine; ebb takes that core into durable orchestration with a reproducible journal, instance replay and forking, SQLite persistence, a CLI, web console and external workers with retries and incidents.",
+    tags: ["TypeScript", "BPMN 2.0", "Durable Execution"],
     category: "web",
     language: "TypeScript",
     href: "https://github.com/Bappoz/bpmn-flow",
     live: "https://bappoz.github.io/bpmn-flow/",
+    repositories: [
+      {
+        labelPt: "Motor bpmn-flow",
+        labelEn: "bpmn-flow engine",
+        href: "https://github.com/Bappoz/bpmn-flow",
+      },
+      {
+        labelPt: "Orquestrador ebb",
+        labelEn: "ebb orchestrator",
+        href: "https://github.com/Bappoz/ebb",
+      },
+    ],
     featured: true,
   },
   {

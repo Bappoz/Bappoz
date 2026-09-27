@@ -262,13 +262,26 @@ export default function Projects() {
                 {t("projects.view_live")}
               </ExternalLink>
             )}
-            <ExternalLink
-              href={selected.href}
-              className="button button-outline"
-            >
-              <GitBranch size={15} />
-              {t("projects.view_code")}
-            </ExternalLink>
+            {selected.repositories ? (
+              selected.repositories.map((repository) => (
+                <ExternalLink
+                  key={repository.href}
+                  href={repository.href}
+                  className="button button-outline"
+                >
+                  <GitBranch size={15} />
+                  {pt ? repository.labelPt : repository.labelEn}
+                </ExternalLink>
+              ))
+            ) : (
+              <ExternalLink
+                href={selected.href}
+                className="button button-outline"
+              >
+                <GitBranch size={15} />
+                {t("projects.view_code")}
+              </ExternalLink>
+            )}
           </div>
           <div className="project-team">
             <span className="team-label">{t("design.builtWith")}</span>

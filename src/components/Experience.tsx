@@ -30,6 +30,7 @@ type Event = {
   link?: string;
   linkLabel?: string;
   videoId?: string;
+  videoSrc?: string;
 };
 export default function Experience() {
   const { t } = useTranslation();
@@ -39,7 +40,7 @@ export default function Experience() {
   const selected = jobs[chapter];
   const video = useRef<HTMLDialogElement>(null);
   const [selectedVideo, setSelectedVideo] = useState<Event | null>(null);
-  const [campusPhoto, setCampusPhoto] = useState(0);
+  const [eventPhotos, setEventPhotos] = useState<Record<string, number>>({});
   const [loaded, setLoaded] = useState(false);
   const media = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
@@ -170,56 +171,65 @@ export default function Experience() {
       </div>
       <div className="event-grid">
         {events.map((event) => {
+          const photo = eventPhotos[event.id] ?? 0;
           const image =
-            event.id === "campus" && campusPhoto === 1 && event.alternateImage
+            photo === 1 && event.alternateImage
               ? event.alternateImage
               : event.image;
           const imageSrc = image.startsWith("http") ? image : asset(image);
+          const hasVideo = Boolean(event.videoId || event.videoSrc);
           return (
-          <Reveal className="event-card" key={event.role}>
-            <div
-              className={`event-image event-image--${event.id}`}
-              ref={event.videoId ? media : undefined}
-            >
-              <motion.img
-                src={imageSrc}
-                alt={event.role}
-                width={700}
-                height={450}
-                loading="lazy"
-                style={event.videoId && !reduce ? { scale } : undefined}
-              />
-              {event.id === "campus" && (
-                <button
-                  className="event-photo-toggle"
-                  onClick={() => setCampusPhoto((n) => 1 - n)}
-                  aria-label={t("design.nextPhoto")}
-                >
-                  {campusPhoto + 1} / 2 <ArrowUpRight size={15} />
-                </button>
-              )}
-              {event.videoId && event.link && (
-                <button
-                  className="video-play"
-                  onClick={() => {
-                    setLoaded(false);
-                    setSelectedVideo(event);
-                    video.current?.showModal();
-                    document.body.style.overflow = "hidden";
-                  }}
-                  aria-label={event.linkLabel}
-                >
-                  <Play size={20} fill="currentColor" />
-                  <span>{event.linkLabel}</span>
-                </button>
-              )}
-            </div>
-            <div className="event-copy">
-              <span className="eyebrow">{event.period}</span>
-              <h4>{event.role}</h4>
-              <p>{event.text}</p>
-            </div>
-          </Reveal>
+            <Reveal className="event-card" key={event.role}>
+              <div
+                className={`event-image event-image--${event.id}`}
+                ref={hasVideo ? media : undefined}
+              >
+                <motion.img
+                  src={imageSrc}
+                  alt={event.role}
+                  width={700}
+                  height={450}
+                  loading="lazy"
+                  style={hasVideo && !reduce ? { scale } : undefined}
+                />
+                {event.alternateImage && (
+                  <button
+                    className="event-photo-toggle"
+                    onClick={() =>
+                      setEventPhotos((photos) => ({
+                        ...photos,
+                        [event.id]: photo === 0 ? 1 : 0,
+                      }))
+                    }
+                    aria-label={t("design.nextEventPhoto", {
+                      event: event.role,
+                    })}
+                  >
+                    {photo + 1} / 2 <ArrowUpRight size={15} />
+                  </button>
+                )}
+                {hasVideo && (
+                  <button
+                    className="video-play"
+                    onClick={() => {
+                      setLoaded(false);
+                      setSelectedVideo(event);
+                      video.current?.showModal();
+                      document.body.style.overflow = "hidden";
+                    }}
+                    aria-label={event.linkLabel}
+                  >
+                    <Play size={20} fill="currentColor" />
+                    <span>{event.linkLabel}</span>
+                  </button>
+                )}
+              </div>
+              <div className="event-copy">
+                <span className="eyebrow">{event.period}</span>
+                <h4>{event.role}</h4>
+                <p>{event.text}</p>
+              </div>
+            </Reveal>
           );
         })}
       </div>
@@ -251,6 +261,20 @@ export default function Experience() {
                 allow="autoplay; encrypted-media; picture-in-picture"
                 allowFullScreen
                 onLoad={() => setLoaded(true)}
+              />
+            </>
+          )}
+          {selectedVideo?.videoSrc && (
+            <>
+              {!loaded && <GooeyLoader label={t("design.videoLoading")} />}
+              <video
+                src={asset(selectedVideo.videoSrc)}
+                title={selectedVideo.role}
+                controls
+                autoPlay
+                muted
+                playsInline
+                onLoadedData={() => setLoaded(true)}
               />
             </>
           )}

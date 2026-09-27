@@ -1137,6 +1137,9 @@ h2 {
 .event-image--pmi-hackathon > img {
   object-position: center 42%;
 }
+.event-image--codigo-seguro > img {
+  object-position: center 35%;
+}
 .event-copy {
   padding: 20px 0 0;
 }
@@ -1200,12 +1203,16 @@ h2 {
   overflow: hidden;
   margin-bottom: 17px;
 }
-.video-frame iframe {
+.video-frame iframe,
+.video-frame video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   border: 0;
+}
+.video-frame video {
+  object-fit: contain;
 }
 .video-frame .loading-state {
   height: 100%;
@@ -2407,6 +2414,10 @@ h2 {
   border-radius: 5px;
   padding: 8px 12px;
   font-size: calc(0.75rem + 3px);
+}
+.event-image:has(.video-play) .event-photo-toggle {
+  top: 15px;
+  bottom: auto;
 }
 .chess {
   display: block;

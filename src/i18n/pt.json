@@ -163,6 +163,16 @@
         "period": "Set 2026",
         "text": "Em equipe, desenvolvemos a proposta e o Project Canvas de um sistema inteligente para due diligence, análise de risco de crédito e alertas precoces de inadimplência ou recuperação judicial para a Krill Tech. A solução foi defendida em um pitch para a banca do evento.",
         "image": "gallery/hackathon-pmi-df-2026.webp"
+      },
+      {
+        "id": "codigo-seguro",
+        "role": "Código Seguro: da Ideia à Produção",
+        "period": "22 set 2026 · Semana Universitária da UnB",
+        "text": "O encontro começou com uma palestra sobre carreira em cibersegurança e fundamentos de segurança da informação. Depois, competimos para identificar e explorar vulnerabilidades no OWASP Juice Shop — meu grupo conquistou o 2º lugar entre as equipes.",
+        "image": "gallery/codigo-seguro-equipe.webp",
+        "alternateImage": "gallery/codigo-seguro-competicao.webp",
+        "linkLabel": "Assistir ao vídeo sem áudio",
+        "videoSrc": "media/codigo-seguro-sem-audio.mp4"
       }
     ],
     "gallery_title": "Galeria de eventos",
@@ -271,6 +281,7 @@
     "chess_rapid": "Estatísticas de xadrez rápido no Chess.com",
     "chess_bullet": "Estatísticas de xadrez bullet no Chess.com",
     "nextPhoto": "Ver outra foto da Campus Party",
+    "nextEventPhoto": "Ver outra foto de {{event}}",
     "moreProjects": "Mais projetos para explorar",
     "pageOf": "Página {{page}} de {{pages}}",
     "nextCollection": "Próximos projetos",
