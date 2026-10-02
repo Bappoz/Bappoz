@@ -46,6 +46,28 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--green) var(--background);
+}
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-track {
+  background: var(--background);
+}
+html::-webkit-scrollbar-thumb {
+  border: 2px solid var(--background);
+  border-radius: 999px;
+  background: var(--green);
+}
+html::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
+}
+@supports selector(::-webkit-scrollbar) {
+  html {
+    scrollbar-width: auto;
+    scrollbar-color: auto;
+  }
 }
 body {
   margin: 0;
@@ -643,6 +665,43 @@ h2 {
 .project-count {
   font-size: calc(0.75rem + 3px);
   white-space: nowrap;
+}
+.project-gallery-frame {
+  position: relative;
+}
+.project-gallery-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  color: var(--foreground);
+  background: color-mix(in oklch, var(--background) 28%, transparent);
+  border: 1px solid color-mix(in oklch, var(--foreground) 28%, transparent);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px #00000012;
+  transition: background 180ms, border-color 180ms, box-shadow 180ms;
+}
+.project-gallery-previous {
+  left: 10px;
+}
+.project-gallery-next {
+  right: 10px;
+}
+.project-gallery-arrow:hover,
+.project-gallery-arrow:focus-visible {
+  background: color-mix(in oklch, var(--background) 78%, transparent);
+  border-color: var(--green);
+  box-shadow: 0 3px 14px #00000020;
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-gallery-arrow {
+    transition: none;
+  }
 }
 .elastic-gallery {
   display: flex;

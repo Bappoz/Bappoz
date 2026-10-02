@@ -1,7 +1,35 @@
-// Public LinkedIn profile, retrieved 2026-09-11. The source does not expose direct credential URLs.
+// Existing credentials link to LinkedIn; supplied certificates link to local PDFs.
 export const certificateSource =
   "https://www.linkedin.com/in/lucas-andrade-zanetti/details/certifications/";
 export const certifications = [
+  {
+    name: "Finalista — SAE BRASIL Jump Start 2026",
+    nameEn: "Finalist — SAE BRASIL Jump Start 2026",
+    issuer: "SAE BRASIL",
+    logo: "sae",
+    date: "2026-09",
+    href: "certificates/jump-start-2026.pdf",
+  },
+  {
+    name: "Introdução ao Aprendizado Profundo com PyTorch",
+    nameEn: "Introduction to Deep Learning with PyTorch",
+    issuer: "Universidade de Brasília",
+    logo: "unb",
+    date: "2026-09",
+    id: "8 horas · c2ce7ac975 · doc. 3226773",
+    idEn: "8 hours · c2ce7ac975 · doc. 3226773",
+    href: "certificates/introducao-aprendizado-profundo-pytorch.pdf",
+  },
+  {
+    name: "Código Seguro: da Ideia à Produção",
+    nameEn: "Secure Code: from Idea to Production",
+    issuer: "Universidade de Brasília",
+    logo: "unb",
+    date: "2026-09",
+    id: "4 horas · f9a2408e31 · doc. 3226748",
+    idEn: "4 hours · f9a2408e31 · doc. 3226748",
+    href: "certificates/codigo-seguro.pdf",
+  },
   {
     name: "Participação no iFood CAMP",
     nameEn: "iFood CAMP participation",

@@ -2,6 +2,8 @@ import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   ArrowUpRight,
+  ArrowLeft,
+  ArrowRight,
   ChevronLeft,
   ChevronRight,
   Code2,
@@ -139,95 +141,117 @@ export default function Projects() {
           </div>
         </div>
       )}
-      <div
-        className="elastic-gallery"
-        key={`${filter}-${page}`}
-        role="group"
-        aria-label={t("projects.label")}
-      >
-        {visible.map((p, i) => {
-          const Icon = categoryIcons[p.category];
-          const isActive = i === active;
-          return (
-            <article
-              key={p.href}
-              className={`elastic-card visual-${p.visual?.kind || "default"} project-${p.category} ${isActive ? "is-active" : ""}`}
-              style={{ "--card-index": i } as React.CSSProperties}
-            >
-              <button
-                className="project-select"
-                aria-label={t("design.selectProject", { name: p.name })}
-                aria-pressed={isActive}
-                aria-controls="project-details"
-                onClick={() => select(i)}
-                onFocus={() => select(i)}
-                onPointerEnter={(e) => {
-                  if (e.pointerType === "mouse") select(i);
-                }}
-                onKeyDown={(e) => {
-                  if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
-                    e.preventDefault();
-                    const next =
-                      (i + (e.key === "ArrowRight" ? 1 : -1) + visible.length) %
-                      visible.length;
-                    e.currentTarget
-                      .closest(".elastic-gallery")
-                      ?.querySelectorAll<HTMLButtonElement>(".project-select")
-                      [next]?.focus();
-                  }
-                }}
+      <div className="project-gallery-frame">
+        <div
+          className="elastic-gallery"
+          key={`${filter}-${page}`}
+          role="group"
+          aria-label={t("projects.label")}
+        >
+          {visible.map((p, i) => {
+            const Icon = categoryIcons[p.category];
+            const isActive = i === active;
+            return (
+              <article
+                key={p.href}
+                className={`elastic-card visual-${p.visual?.kind || "default"} project-${p.category} ${isActive ? "is-active" : ""}`}
+                style={{ "--card-index": i } as React.CSSProperties}
               >
-                <div className="project-top">
-                  <span className="project-index">
-                    {String(page * PAGE_SIZE + i + 1).padStart(2, "0")}
-                  </span>
-                  <Icon size={20} strokeWidth={1.5} />
-                </div>
-                <div className="project-art" aria-hidden="true">
-                  {p.visual ? (
-                    <img
-                      className={
-                        ["screenshot", "figure", "cover"].includes(
-                          p.visual.kind,
-                        )
-                          ? `project-screenshot project-${p.visual.kind}`
-                          : `project-logo ${p.visual.kind}`
-                      }
-                      src={asset(p.visual.src)}
-                      alt=""
-                      width={p.visual.kind === "screenshot" ? 1000 : 320}
-                      height={180}
-                      loading="lazy"
-                    />
-                  ) : (
-                    <div className="project-art-symbol">
-                      <Icon strokeWidth={0.75} />
-                    </div>
-                  )}
-                  {(!p.visual || p.visual.kind === "farol-logo") && (
-                    <span>{p.coverTitle || p.name}</span>
-                  )}
-                  <div className="project-art-line">
-                    <span>{p.language}</span>
-                    <i />
-                    <Code2 size={16} />
-                  </div>
-                </div>
-                <div className="project-bottom">
-                  <div>
-                    <span className="project-kind">
-                      {t(`design.category_${p.category}`)}
+                <button
+                  className="project-select"
+                  aria-label={t("design.selectProject", { name: p.name })}
+                  aria-pressed={isActive}
+                  aria-controls="project-details"
+                  onClick={() => select(i)}
+                  onFocus={() => select(i)}
+                  onPointerEnter={(e) => {
+                    if (e.pointerType === "mouse") select(i);
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+                      e.preventDefault();
+                      const next =
+                        (i + (e.key === "ArrowRight" ? 1 : -1) + visible.length) %
+                        visible.length;
+                      e.currentTarget
+                        .closest(".elastic-gallery")
+                        ?.querySelectorAll<HTMLButtonElement>(".project-select")
+                        [next]?.focus();
+                    }
+                  }}
+                >
+                  <div className="project-top">
+                    <span className="project-index">
+                      {String(page * PAGE_SIZE + i + 1).padStart(2, "0")}
                     </span>
-                    <h3>{p.name}</h3>
+                    <Icon size={20} strokeWidth={1.5} />
                   </div>
-                  <span className="project-expand">
-                    <ArrowUpRight size={20} />
-                  </span>
-                </div>
-              </button>
-            </article>
-          );
-        })}
+                  <div className="project-art" aria-hidden="true">
+                    {p.visual ? (
+                      <img
+                        className={
+                          ["screenshot", "figure", "cover"].includes(
+                            p.visual.kind,
+                          )
+                            ? `project-screenshot project-${p.visual.kind}`
+                            : `project-logo ${p.visual.kind}`
+                        }
+                        src={asset(p.visual.src)}
+                        alt=""
+                        width={p.visual.kind === "screenshot" ? 1000 : 320}
+                        height={180}
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="project-art-symbol">
+                        <Icon strokeWidth={0.75} />
+                      </div>
+                    )}
+                    {(!p.visual || p.visual.kind === "farol-logo") && (
+                      <span>{p.coverTitle || p.name}</span>
+                    )}
+                    <div className="project-art-line">
+                      <span>{p.language}</span>
+                      <i />
+                      <Code2 size={16} />
+                    </div>
+                  </div>
+                  <div className="project-bottom">
+                    <div>
+                      <span className="project-kind">
+                        {t(`design.category_${p.category}`)}
+                      </span>
+                      <h3>{p.name}</h3>
+                    </div>
+                    <span className="project-expand">
+                      <ArrowUpRight size={20} />
+                    </span>
+                  </div>
+                </button>
+              </article>
+            );
+          })}
+        </div>
+        {page > 0 && (
+          <button
+            className="project-gallery-arrow project-gallery-previous"
+            aria-label={t("design.previous")}
+            aria-controls="project-details"
+            onClick={() => changePage(page - 1)}
+          >
+            <ArrowLeft size={22} strokeWidth={1.5} aria-hidden="true" />
+          </button>
+        )}
+        {page < pages - 1 && (
+          <button
+            className="project-gallery-arrow project-gallery-next"
+            aria-label={t("design.next")}
+            aria-controls="project-details"
+            onClick={() => changePage(page + 1)}
+          >
+            <ArrowRight size={22} strokeWidth={1.5} aria-hidden="true" />
+          </button>
+        )}
       </div>
       <div
         id="project-details"

@@ -231,7 +231,7 @@
     "letsTalk": "Vamos conversar",
     "heroFootnote": "Fullstack na prática. Rust no coração.",
     "profileBio": "Engenharia de software, boas perguntas e vontade de ir além da superfície.",
-    "profileEducation": "Eng. de Software · UnB",
+    "profileEducation": "Engenharia de Software · UnB",
     "profileCaption": "O dev por trás do código.",
     "focusLine": "Web · Sistemas · Dados & IA",
     "menuNote": "Ideias ganham forma.\nCódigo ganha propósito.",
@@ -384,6 +384,7 @@
     "demoPlay": "Assistir simulação"
   },
   "certifications": {
+    "viewPdf": "Ver certificado de {{name}} em PDF",
     "label": "Certificações & aprendizados",
     "title": "Conhecimento que se renova.",
     "source": "Certificados no LinkedIn",

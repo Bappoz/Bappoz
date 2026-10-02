@@ -384,6 +384,7 @@
     "demoPlay": "Play simulation"
   },
   "certifications": {
+    "viewPdf": "View {{name}} certificate as PDF",
     "label": "Certifications & learning",
     "title": "Always something new to learn.",
     "source": "Certificates on LinkedIn",

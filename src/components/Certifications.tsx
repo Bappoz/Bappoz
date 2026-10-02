@@ -42,18 +42,30 @@ export default function Certifications() {
               >
                 <a
                   className="certificate-badge"
-                  href={certificateSource}
+                  href={cert.href ? asset(cert.href) : certificateSource}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label={t("certifications.view", { name })}
+                  aria-label={t(
+                    cert.href ? "certifications.viewPdf" : "certifications.view",
+                    { name },
+                  )}
                 >
                   <div className="certificate-seal">
-                    <img
-                      src={asset(`logos/${cert.logo}.webp`)}
-                      alt={cert.issuer}
-                      width={42}
-                      height={42}
-                    />
+                    {cert.logo === "sae" ? (
+                      <span
+                        className="certificate-monogram"
+                        aria-label={cert.issuer}
+                      >
+                        SAE
+                      </span>
+                    ) : (
+                      <img
+                        src={asset(`logos/${cert.logo}.webp`)}
+                        alt={cert.issuer}
+                        width={42}
+                        height={42}
+                      />
+                    )}
                   </div>
                   <span className="certificate-issuer">{cert.issuer}</span>
                   <strong>{name}</strong>
