@@ -148,6 +148,17 @@
         "videoId": "WJ31fUvhq2c"
       },
       {
+        "id": "sae-toyota-bloom",
+        "role": "Jump Start 2026 — SAE Brasil + Toyota",
+        "period": "2026",
+        "text": "Participação no Jump Start da SAE Brasil em parceria com a Toyota, com o projeto BLOOM. O trabalho inclui uma base de conhecimento com a documentação e um protótipo, apresentados em pitch no evento.",
+        "image": "gallery/07c505bc-eb7c-4509-9d26-f5ebde1ff90b.jpeg",
+        "alternateImage": "gallery/ea7e30bb-6b0b-4709-b6e1-60827389d7de.jpeg",
+        "link": "https://youtu.be/giAece1IZz8",
+        "linkLabel": "Assistir ao pitch",
+        "videoId": "giAece1IZz8"
+      },
+      {
         "id": "ibm-dev-day",
         "role": "Apresentação — IBM Dev Day: Bob in Action",
         "period": "Ago 2026",

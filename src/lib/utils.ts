@@ -1,5 +1,7 @@
 export const asset = (path: string) =>
-  `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+  /^https?:\/\//.test(path)
+    ? path
+    : `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
 
 export async function fetchJson<T>(
   url: string,

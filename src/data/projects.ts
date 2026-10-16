@@ -86,6 +86,7 @@ export const projects: Project[] = [
   },
   {
     name: "Crusty",
+    visual: { src: "projects/crusty.png", kind: "brand-logo" },
     descPt:
       "Compilador escrito em Rust, desenvolvido para a disciplina de Compiladores 1. Lexer, parser e análise semântica com foco em corretude.",
     descEn:
@@ -95,6 +96,70 @@ export const projects: Project[] = [
     language: "Rust",
     href: "https://github.com/Bappoz/Crusty",
     featured: true,
+  },
+  {
+    name: "BLOOM",
+    descPt:
+      "Projeto desenvolvido no Jump Start 2026 da SAE Brasil em parceria com a Toyota. Reúne a base de conhecimento e documentação do projeto e seu protótipo funcional.",
+    descEn:
+      "Project developed at SAE Brazil and Toyota's Jump Start 2026. It brings together the project's knowledge base and documentation with its functional prototype.",
+    tags: ["SAE Brasil", "Toyota", "Jump Start 2026"],
+    category: "web",
+    language: "TypeScript",
+    href: "https://github.com/Jump-Start-2026-SAE-Grupo-Supra/Prototype-BLOOM",
+    repositories: [
+      {
+        labelPt: "Protótipo",
+        labelEn: "Prototype",
+        href: "https://github.com/Jump-Start-2026-SAE-Grupo-Supra/Prototype-BLOOM",
+      },
+      {
+        labelPt: "Documentação",
+        labelEn: "Documentation",
+        href: "https://github.com/Jump-Start-2026-SAE-Grupo-Supra/BLOOM-knowledge-base",
+      },
+    ],
+    featured: true,
+  },
+  {
+    name: "Perceptor",
+    visual: { src: "projects/perceptor.png", kind: "figure" },
+    descPt:
+      "Plataforma de robótica móvel com ROS 2 para navegação autônoma, mapeamento SLAM e fusão de sensores.",
+    descEn:
+      "A ROS 2 mobile robotics platform for autonomous navigation, SLAM mapping and sensor fusion.",
+    tags: ["ROS 2", "Robótica", "Navegação autônoma"],
+    category: "systems",
+    language: "Python",
+    href: "https://github.com/Bappoz/perceptor",
+    featured: true,
+  },
+  {
+    name: "Mercado Lerdo",
+    visual: {
+      src: "https://raw.githubusercontent.com/Bappoz/mercado-lerdo/main/docs/assets/logo.png",
+      kind: "brand-logo",
+    },
+    descPt:
+      "Jogo para aprender engenharia de software operando um sistema real: investigue falhas sob carga com métricas, logs e terminal e evolua o código ou a infraestrutura para corrigir cada cenário.",
+    descEn:
+      "A game for learning software engineering by operating a real system: investigate failures under load with metrics, logs and a terminal, then improve the code or infrastructure to resolve each scenario.",
+    tags: ["Software Engineering", "Simulation", "Game"],
+    category: "web",
+    language: "TypeScript",
+    href: "https://github.com/Bappoz/mercado-lerdo",
+  },
+  {
+    name: "Omarchy AI Usage",
+    coverTitle: "AI Usage",
+    descPt:
+      "Plugin nativo para Omarchy que mostra, junto à borda da tela, o consumo e os limites de uso do Claude Code e do Codex.",
+    descEn:
+      "A native Omarchy plugin that displays Claude Code and Codex usage and quota limits in a compact surface attached to the screen edge.",
+    tags: ["Omarchy", "Quickshell", "Claude Code", "Codex"],
+    category: "ai",
+    language: "QML / Python",
+    href: "https://github.com/Bappoz/omarchy-ai-usage",
   },
   {
     name: "Crianex",
