@@ -27,6 +27,7 @@ type Event = {
   text: string;
   image: string;
   alternateImage?: string;
+  images?: string[];
   link?: string;
   linkLabel?: string;
   videoId?: string;
@@ -172,10 +173,12 @@ export default function Experience() {
       <div className="event-grid">
         {events.map((event) => {
           const photo = eventPhotos[event.id] ?? 0;
-          const image =
-            photo === 1 && event.alternateImage
-              ? event.alternateImage
-              : event.image;
+          const images =
+            event.images ??
+            [event.image, event.alternateImage].filter(
+              (image): image is string => Boolean(image),
+            );
+          const image = images[photo % images.length];
           const imageSrc = image.startsWith("http") ? image : asset(image);
           const hasVideo = Boolean(event.videoId || event.videoSrc);
           return (
@@ -192,20 +195,20 @@ export default function Experience() {
                   loading="lazy"
                   style={hasVideo && !reduce ? { scale } : undefined}
                 />
-                {event.alternateImage && (
+                {images.length > 1 && (
                   <button
                     className="event-photo-toggle"
                     onClick={() =>
                       setEventPhotos((photos) => ({
                         ...photos,
-                        [event.id]: photo === 0 ? 1 : 0,
+                        [event.id]: (photo + 1) % images.length,
                       }))
                     }
                     aria-label={t("design.nextEventPhoto", {
                       event: event.role,
                     })}
                   >
-                    {photo + 1} / 2 <ArrowUpRight size={15} />
+                    {photo + 1} / {images.length} <ArrowUpRight size={15} />
                   </button>
                 )}
                 {hasVideo && (

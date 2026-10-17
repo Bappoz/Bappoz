@@ -148,10 +148,21 @@
         "videoId": "WJ31fUvhq2c"
       },
       {
-        "id": "sae-toyota-bloom",
-        "role": "Jump Start 2026 — SAE Brazil + Toyota",
+        "id": "toyota-visit",
+        "role": "Toyota technical visit",
         "period": "2026",
-        "text": "I took part in SAE Brazil and Toyota's Jump Start with the BLOOM project. The work includes a documented knowledge base and a prototype, presented in an event pitch.",
+        "text": "A technical visit to Toyota during Jump Start 2026, with an immersion in the company's production system and practices.",
+        "images": [
+          "gallery/01f48153-b303-439b-978f-77366b6c029d.jpeg",
+          "gallery/14d6476b-f9e4-4a4b-9e07-3adc1a178f18.jpeg",
+          "gallery/930a4c90-5694-4f96-a218-3d820dd88560.jpeg"
+        ]
+      },
+      {
+        "id": "sae-brazil-bloom",
+        "role": "SAE Brazil — Jump Start 2026 · BLOOM project",
+        "period": "2026",
+        "text": "I took part in SAE Brazil's Jump Start 2026 with the BLOOM project, presented in a pitch. The project brings together a documented knowledge base and a functional prototype.",
         "image": "gallery/07c505bc-eb7c-4509-9d26-f5ebde1ff90b.jpeg",
         "alternateImage": "gallery/ea7e30bb-6b0b-4709-b6e1-60827389d7de.jpeg",
         "link": "https://youtu.be/giAece1IZz8",

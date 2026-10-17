@@ -99,6 +99,7 @@ export const projects: Project[] = [
   },
   {
     name: "BLOOM",
+    visual: { src: "projects/bloom-logo.png", kind: "brand-logo" },
     descPt:
       "Projeto desenvolvido no Jump Start 2026 da SAE Brasil em parceria com a Toyota. Reúne a base de conhecimento e documentação do projeto e seu protótipo funcional.",
     descEn:
