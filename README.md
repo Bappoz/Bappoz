@@ -53,7 +53,7 @@
 <br><br>
 
 <a href="https://www.chess.com/member/Bappoz">
-  <img src="https://raw.githubusercontent.com/Bappoz/chess_readme_status/main/assets/chess-activity.svg" />
+  <img src="https://raw.githubusercontent.com/Bappoz/chess_readme_status/main/assets/chess-last-game.svg" />
 </a>  
 
 </div>
