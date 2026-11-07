@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="230" viewBox="0 0 960 230" role="img" aria-labelledby="title desc">
+<title id="title">Lucas Zanetti — Software engineer</title><desc id="desc">UnB (FCTE). AI systems, embedded systems, full stack and low-level engineering.</desc>
+<rect width="960" height="230" rx="12" fill="#17120F"/>
+<path d="M32 30h896" stroke="#3B2C26"/>
+<g fill="#E88B5A"><circle cx="36" cy="16" r="3"/><circle cx="48" cy="16" r="3"/><circle cx="60" cy="16" r="3"/></g>
+<text x="34" y="64" fill="#B9A79B" font-family="monospace" font-size="14">~/bappoz <tspan fill="#E88B5A">❯ whoami</tspan></text>
+<text x="32" y="125" fill="#F5EDE5" font-family="Georgia,serif" font-size="56">Lucas Zanetti</text>
+<text x="35" y="158" fill="#E88B5A" font-family="Arial,sans-serif" font-size="19">Software engineer · UnB (FCTE)</text>
+<path d="M35 181h890" stroke="#3B2C26"/>
+<text x="35" y="210" fill="#B9A79B" font-family="Arial,sans-serif" font-size="16">AI systems / Embedded / Full stack / Low-level engineering</text>
+<path d="m835 85 20 18-20 18m34 0h24" fill="none" stroke="#E88B5A" stroke-width="5"/>
+</svg>
