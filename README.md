@@ -34,3 +34,10 @@
 <p align="center">
   <a href="https://open.spotify.com/user/bappoz"><img src="https://spotify-now-playing-m4yj.onrender.com/api/orchestrator" width="100%" alt="Spotify — what Bappoz is listening to" /></a>
 </p>
+
+<p align="center">
+  <img 
+    src="https://capsule-render.vercel.app/api?type=waving&color=0:141413,100:D97757&height=100&section=footer&animation=fadeIn"
+    width="100%"
+  />
+</p>
